@@ -1,0 +1,81 @@
+# Three-Act Structure Pattern Library
+name: "three_act_structure"
+description: "Classic dramatic structure with setup, confrontation, and resolution"
+
+pattern_type: "structure"
+
+acts:
+  act_one:
+    name: "Setup"
+    percentage: 25
+    key_elements:
+      - "Inciting incident"
+      - "Character introduction"
+      - "World establishment"
+      - "Central conflict introduction"
+    validation_rules:
+      - "Must establish protagonist goals"
+      - "Must introduce central conflict"
+      - "Should end with plot point 1"
+
+  act_two:
+    name: "Confrontation" 
+    percentage: 50
+    key_elements:
+      - "Rising action"
+      - "Character development"
+      - "Obstacles and complications"
+      - "Midpoint reversal"
+      - "Plot point 2"
+    validation_rules:
+      - "Must contain midpoint reversal"
+      - "Must escalate conflict"
+      - "Should develop character relationships"
+
+  act_three:
+    name: "Resolution"
+    percentage: 25
+    key_elements:
+      - "Climax"
+      - "Falling action"
+      - "Resolution"
+      - "Denouement"
+    validation_rules:
+      - "Must resolve central conflict"
+      - "Must address character arcs"
+      - "Should provide satisfying conclusion"
+
+beats:
+  - name: "opening_image"
+    act: 1
+    position: 0.01
+    description: "Visual representation of theme"
+  
+  - name: "inciting_incident"
+    act: 1
+    position: 0.12
+    description: "Event that sets story in motion"
+  
+  - name: "plot_point_1"
+    act: 1
+    position: 0.25
+    description: "Commitment to the journey"
+  
+  - name: "midpoint"
+    act: 2
+    position: 0.50
+    description: "Major reversal or revelation"
+  
+  - name: "plot_point_2"
+    act: 2
+    position: 0.75
+    description: "Point of no return"
+  
+  - name: "climax"
+    act: 3
+    position: 0.90
+    description: "Final confrontation"
+
+confidence_thresholds:
+  minimum: 0.70
+  excellent: 0.85

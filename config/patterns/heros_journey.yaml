@@ -1,0 +1,127 @@
+# Hero's Journey Pattern Library
+name: "heros_journey"
+description: "Joseph Campbell's monomyth structure for heroic narratives"
+
+pattern_type: "character_arc"
+
+stages:
+  ordinary_world:
+    name: "Ordinary World"
+    act: 1
+    position: 0.05
+    description: "Hero's normal life before transformation"
+    validation_rules:
+      - "Must establish hero's status quo"
+      - "Should show hero's limitations"
+
+  call_to_adventure:
+    name: "Call to Adventure"
+    act: 1
+    position: 0.10
+    description: "Hero presented with problem or challenge"
+    validation_rules:
+      - "Must present clear challenge"
+      - "Should disrupt ordinary world"
+
+  refusal_of_call:
+    name: "Refusal of the Call"
+    act: 1
+    position: 0.15
+    description: "Hero hesitates or refuses adventure"
+    validation_rules:
+      - "May be brief or implied"
+      - "Shows hero's reluctance"
+
+  meeting_mentor:
+    name: "Meeting the Mentor"
+    act: 1
+    position: 0.20
+    description: "Hero encounters wise figure"
+    validation_rules:
+      - "Mentor provides advice or magical aid"
+      - "May be person, object, or inner wisdom"
+
+  crossing_threshold:
+    name: "Crossing the First Threshold"
+    act: 1
+    position: 0.25
+    description: "Hero commits to adventure"
+    validation_rules:
+      - "Must show commitment to journey"
+      - "Leaves familiar world behind"
+
+  tests_allies_enemies:
+    name: "Tests, Allies, and Enemies"
+    act: 2
+    position: 0.40
+    description: "Hero faces challenges and learns rules"
+    validation_rules:
+      - "Must test hero's resolve"
+      - "Should establish relationships"
+
+  approach_inmost_cave:
+    name: "Approach to the Inmost Cave"
+    act: 2
+    position: 0.60
+    description: "Hero prepares for major challenge"
+    validation_rules:
+      - "Must build tension"
+      - "Preparation for ordeal"
+
+  ordeal:
+    name: "The Ordeal"
+    act: 2
+    position: 0.75
+    description: "Hero faces greatest fear or crisis"
+    validation_rules:
+      - "Must be hero's darkest moment"
+      - "Death or defeat appears certain"
+
+  reward:
+    name: "The Reward"
+    act: 3
+    position: 0.80
+    description: "Hero survives and gains something"
+    validation_rules:
+      - "Must show growth or gain"
+      - "May be object, knowledge, or experience"
+
+  road_back:
+    name: "The Road Back"
+    act: 3
+    position: 0.85
+    description: "Hero begins journey back to ordinary world"
+    validation_rules:
+      - "Must show commitment to return"
+      - "May involve pursuit or chase"
+
+  resurrection:
+    name: "The Resurrection"
+    act: 3
+    position: 0.90
+    description: "Final test and transformation"
+    validation_rules:
+      - "Must show hero's transformation"
+      - "Hero is reborn or purified"
+
+  return_elixir:
+    name: "Return with the Elixir"
+    act: 3
+    position: 0.95
+    description: "Hero returns home transformed"
+    validation_rules:
+      - "Must show benefit to ordinary world"
+      - "Hero has grown and changed"
+
+character_archetypes:
+  hero: "Central character on transformative journey"
+  mentor: "Wise guide who aids the hero"
+  threshold_guardian: "Tests hero's resolve"
+  herald: "Announces need for change"
+  shapeshifter: "Loyalty or true nature uncertain"
+  shadow: "Villain or dark force"
+  trickster: "Provides comic relief"
+
+confidence_thresholds:
+  minimum: 0.70
+  excellent: 0.85

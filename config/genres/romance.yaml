@@ -1,0 +1,47 @@
+# Romance Genre Template
+name: "romance"
+description: "Stories centered on romantic relationships and emotional connections"
+
+conventions:
+  pacing:
+    - "Emotional beats drive progression"
+    - "Sexual tension and chemistry"
+    - "Obstacles delay romantic union"
+  
+  structure:
+    act_one:
+      - "Meet cute or initial attraction"
+      - "Establish characters' romantic goals"
+      - "First obstacle to relationship"
+    act_two:
+      - "Growing attraction and bonding"
+      - "External and internal conflicts"
+      - "Misunderstandings and separation"
+      - "Dark moment or breakup"
+    act_three:
+      - "Realization of true love"
+      - "Grand gesture or confession"
+      - "Happy ending together"
+
+  character_archetypes:
+    - "Romantic lead (male/female)"
+    - "Love interest"
+    - "Rival or ex-partner"
+    - "Best friend/confidant"
+
+  common_elements:
+    - "Sexual tension and chemistry"
+    - "Obstacles to love"
+    - "Emotional vulnerability"
+    - "Happy ending (HEA)"
+    - "Character growth through love"
+
+authenticity_markers:
+  required:
+    - chemistry: "Believable romantic attraction"
+    - emotional_truth: "Realistic relationship dynamics"
+    - satisfaction: "Earned happy ending"
+  
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

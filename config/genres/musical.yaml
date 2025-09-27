@@ -1,0 +1,47 @@
+# Musical Genre Template
+name: "musical"
+description: "Stories where characters express emotions and advance plot through song"
+
+conventions:
+  pacing:
+    - "Songs advance plot and character development"
+    - "Musical numbers at emotional peaks"
+    - "Dialogue and music integration"
+  
+  structure:
+    act_one:
+      - "Opening number establishes world and tone"
+      - "Character introductions through song"
+      - "Central conflict or desire expressed"
+    act_two:
+      - "Character development through musical numbers"
+      - "Plot complications addressed in song"
+      - "Romantic or ensemble pieces"
+      - "Major production number"
+    act_three:
+      - "Climactic musical confrontation"
+      - "Resolution through song"
+      - "Finale bringing themes together"
+
+  character_archetypes:
+    - "Protagonist with distinctive vocal style"
+    - "Love interest or duet partner"
+    - "Comic relief with comedic songs"
+    - "Antagonist with villain song"
+
+  common_elements:
+    - "Musical numbers and choreography"
+    - "Songs that advance the plot"
+    - "Emotional expression through music"
+    - "Ensemble pieces and choruses"
+    - "Recurring musical themes"
+
+authenticity_markers:
+  required:
+    - song_integration: "Songs feel natural and advance story"
+    - emotional_expression: "Music enhances emotional impact"
+    - memorable_music: "Catchy and appropriate musical numbers"
+  
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

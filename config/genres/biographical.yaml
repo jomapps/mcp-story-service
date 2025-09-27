@@ -1,0 +1,47 @@
+# Biographical Genre Template
+name: "biographical"
+description: "Stories depicting the life of a real person or inspired by real lives"
+
+conventions:
+  pacing:
+    - "Life events drive narrative progression"
+    - "Character development over time"
+    - "Key moments and turning points"
+  
+  structure:
+    act_one:
+      - "Establish subject's background and context"
+      - "Early life or formative experiences"
+      - "First major challenge or opportunity"
+    act_two:
+      - "Rise to prominence or significance"
+      - "Major achievements and setbacks"
+      - "Personal and professional struggles"
+      - "Crisis or major life challenge"
+    act_three:
+      - "Resolution of central life conflict"
+      - "Legacy or lasting impact"
+      - "Reflection on life's meaning"
+
+  character_archetypes:
+    - "The biographical subject"
+    - "Supporting family or friends"
+    - "Mentor or influential figure"
+    - "Antagonist or opposing force"
+
+  common_elements:
+    - "Real-life events and timeline"
+    - "Personal relationships and family"
+    - "Professional or public achievements"
+    - "Character growth and change"
+    - "Historical and social context"
+
+authenticity_markers:
+  required:
+    - factual_basis: "Grounded in real person's life and documented events"
+    - character_truth: "Captures essence of person's character and motivations"
+    - respectful_portrayal: "Balanced and fair representation of subject"
+  
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

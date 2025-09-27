@@ -1,0 +1,47 @@
+# Superhero Genre Template
+name: "superhero"
+description: "Stories featuring characters with extraordinary powers protecting others"
+
+conventions:
+  pacing:
+    - "Origin story or power discovery"
+    - "Training and power development"
+    - "Escalating threats requiring hero intervention"
+  
+  structure:
+    act_one:
+      - "Normal life or origin of powers"
+      - "First use of abilities"
+      - "Call to heroism or responsibility"
+    act_two:
+      - "Learning to use powers responsibly"
+      - "Facing increasingly dangerous villains"
+      - "Personal life vs hero duties conflict"
+      - "Major threat to city/world"
+    act_three:
+      - "Final confrontation with main villain"
+      - "Hero saves the day using powers and wisdom"
+      - "New equilibrium with hero identity"
+
+  character_archetypes:
+    - "Reluctant hero with special abilities"
+    - "Powerful supervillain with opposing goals"
+    - "Civilian love interest or family"
+    - "Mentor or fellow superhero"
+
+  common_elements:
+    - "Superpowers and abilities"
+    - "Secret identity conflicts"
+    - "Responsibility and sacrifice themes"
+    - "Good vs evil moral clarity"
+    - "Spectacular action sequences"
+
+authenticity_markers:
+  required:
+    - power_consistency: "Established rules for abilities and limitations"
+    - moral_core: "Strong ethical foundation driving heroic actions"
+    - personal_stakes: "Hero's personal life affected by heroic duties"
+  
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

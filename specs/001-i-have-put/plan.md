@@ -1,8 +1,7 @@
+# Implementation Plan: MCP Story Service - Standalone Narrative Intelligence Server
 
-# Implementation Plan: [FEATURE]
-
-**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
-**Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
+**Branch**: `001-i-have-put` | **Date**: 2025-09-26 | **Spec**: [spec.md](./spec.md)
+**Input**: Feature specification from `D:\Projects\mcp-story-service\specs\001-i-have-put\spec.md`
 
 ## Execution Flow (/plan command scope)
 ```
@@ -31,24 +30,29 @@
 - Phase 3-4: Implementation execution (manual or via tools)
 
 ## Summary
-[Extract from feature spec: primary requirement + technical approach from research]
+Standalone MCP server providing specialized narrative intelligence for AI movie production platform. Primary requirement: AI agents need story analysis, plot validation, and narrative consistency checking capabilities to create well-structured, genre-appropriate content. Technical approach: Python-based MCP protocol server with narrative analysis algorithms, genre pattern matching, and story state management using separate analysis processes per project.
 
 ## Technical Context
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**LLM Requirements**: [if applicable, e.g., OpenAI GPT-4, Anthropic Claude, Local Llama or N/A - MUST be declared in env vars with BAML]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+**Language/Version**: Python 3.11+  
+**Primary Dependencies**: MCP protocol implementation, asyncio for concurrent handling, narrative analysis libraries  
+**Storage**: Redis for story state management, coordination with Neo4j via Brain service for knowledge persistence  
+**Testing**: pytest for unit/integration testing, MCP protocol testing framework  
+**Target Platform**: Linux server deployment at story.ft.tc:8010
+**Project Type**: single - standalone MCP server service  
+**LLM Requirements**: N/A - narrative analysis uses rule-based algorithms, no LLM integration required  
+**Performance Goals**: Quality-prioritized story analysis, 10 concurrent requests, 75% confidence threshold  
+**Constraints**: Integration with existing service architecture (brain.ft.tc, auto-movie.ft.tc, tasks.ft.tc), separate analysis processes per project  
+**Scale/Scope**: Support for 15+ movie genres, multi-episode story tracking, real-time validation, project isolation
 
 ## Constitution Check
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+**I. Library-First**: ✅ PASS - MCP server will be self-contained with clear narrative intelligence purpose, each service component has single responsibility  
+**II. Test-First**: ✅ PASS - TDD approach with contract tests before implementation, integration tests for story analysis scenarios  
+**III. Simplicity**: ✅ PASS - Single responsibility service focused exclusively on story analysis, quality over speed aligned with performance requirements  
+**IV. Integration Testing**: ✅ PASS - MCP protocol contract validation, cross-service communication, session state persistence testing planned  
+**V. Observability**: ✅ PASS - MCP protocol provides structured communication for debugging, confidence scores and reasoning paths required  
+**VI. LLM Declaration**: ✅ PASS - No LLM requirements identified, narrative analysis uses rule-based algorithms
 
 ## Project Structure
 
@@ -64,50 +68,31 @@ specs/[###-feature]/
 ```
 
 ### Source Code (repository root)
-<!--
-  ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
-  for this feature. Delete unused options and expand the chosen structure with
-  real paths (e.g., apps/admin, packages/something). The delivered plan must
-  not include Option labels.
--->
 ```
-# [REMOVE IF UNUSED] Option 1: Single project (DEFAULT)
 src/
-├── models/
-├── services/
-├── cli/
-└── lib/
+├── models/              # Story entities: Arc, Thread, Beat, Journey, Genre, Rules
+├── services/            # Narrative analysis engines and validators
+│   ├── narrative/       # Story structure analysis
+│   ├── consistency/     # Plot hole detection and validation  
+│   ├── genre/          # Genre-specific pattern matching
+│   └── pacing/         # Tension curve and rhythm analysis
+├── mcp/                # MCP protocol server implementation
+│   ├── server.py       # Main MCP server
+│   ├── tools/          # MCP tool definitions for story analysis
+│   └── handlers/       # Request handlers for each story operation
+└── lib/                # Shared utilities and algorithms
 
 tests/
-├── contract/
-├── integration/
-└── unit/
+├── contract/           # MCP protocol contract tests
+├── integration/        # End-to-end story analysis tests
+└── unit/              # Individual component tests
 
-# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
-backend/
-├── src/
-│   ├── models/
-│   ├── services/
-│   └── api/
-└── tests/
-
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-└── tests/
-
-# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
-api/
-└── [same as backend above]
-
-ios/ or android/
-└── [platform-specific structure: feature modules, UI flows, platform tests]
+config/
+├── genres/            # Genre template definitions (15+ genre YAML files)
+└── patterns/          # Narrative pattern libraries (three-act, hero journey)
 ```
 
-**Structure Decision**: [Document the selected structure and reference the real
-directories captured above]
+**Structure Decision**: Single project structure selected. MCP server will be self-contained with clear separation between narrative logic (src/services), protocol handling (src/mcp), and data models (src/models). Configuration-driven approach for genres and patterns allows extensibility while supporting the 15+ genre requirement with 75% confidence threshold.
 
 ## Phase 0: Outline & Research
 1. **Extract unknowns from Technical Context** above:
@@ -179,7 +164,7 @@ directories captured above]
 - Dependency order: Models before services before UI
 - Mark [P] for parallel execution (independent files)
 
-**Estimated Output**: 25-30 numbered, ordered tasks in tasks.md
+**Estimated Output**: 50+ numbered, ordered tasks in tasks.md
 
 **IMPORTANT**: This phase is executed by the /tasks command, NOT by /plan
 
@@ -203,18 +188,18 @@ directories captured above]
 *This checklist is updated during execution flow*
 
 **Phase Status**:
-- [ ] Phase 0: Research complete (/plan command)
-- [ ] Phase 1: Design complete (/plan command)
-- [ ] Phase 2: Task planning complete (/plan command - describe approach only)
-- [ ] Phase 3: Tasks generated (/tasks command)
+- [x] Phase 0: Research complete (/plan command)
+- [x] Phase 1: Design complete (/plan command)
+- [x] Phase 2: Task planning complete (/plan command - describe approach only)
+- [x] Phase 3: Tasks generated (/tasks command)
 - [ ] Phase 4: Implementation complete
 - [ ] Phase 5: Validation passed
 
 **Gate Status**:
-- [ ] Initial Constitution Check: PASS
-- [ ] Post-Design Constitution Check: PASS
-- [ ] All NEEDS CLARIFICATION resolved
-- [ ] Complexity deviations documented
+- [x] Initial Constitution Check: PASS
+- [x] Post-Design Constitution Check: PASS
+- [x] All NEEDS CLARIFICATION resolved
+- [x] Complexity deviations documented (none required)
 
 ---
-*Based on Constitution v2.1.1 - See `/memory/constitution.md`*
+*Based on Constitution v1.1.0 - See `.specify/memory/constitution.md`*

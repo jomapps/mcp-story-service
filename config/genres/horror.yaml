@@ -1,0 +1,47 @@
+# Horror Genre Template
+name: "horror"
+description: "Stories designed to frighten, unsettle, and create suspense"
+
+conventions:
+  pacing:
+    - "Building dread and tension"
+    - "Jump scares and relief moments"
+    - "Slow burn to intense climax"
+  
+  structure:
+    act_one:
+      - "Establish normal world"
+      - "First supernatural/threatening event"
+      - "Characters dismiss or rationalize threat"
+    act_two:
+      - "Escalating supernatural events"
+      - "Characters realize true danger"
+      - "Attempts to escape or fight fail"
+      - "Darkest moment before climax"
+    act_three:
+      - "Final confrontation with evil"
+      - "Resolution through sacrifice or victory"
+      - "Ambiguous ending or final scare"
+
+  character_archetypes:
+    - "Final girl/survivor"
+    - "Supernatural antagonist"
+    - "Skeptical authority figure"
+    - "Expendable victim characters"
+
+  common_elements:
+    - "Isolation and vulnerability"
+    - "Unknown or unseen threats"
+    - "Psychological terror"
+    - "Death and violence"
+    - "Supernatural or unexplained events"
+
+authenticity_markers:
+  required:
+    - atmosphere: "Sustained mood of dread and fear"
+    - tension: "Building suspense throughout"
+    - payoff: "Satisfying revelation of threat"
+  
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

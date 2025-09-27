@@ -1,0 +1,53 @@
+# Thriller Genre Template
+name: "thriller"
+description: "Suspenseful stories with tension, danger, and excitement"
+
+conventions:
+  pacing:
+    - "Fast-paced with escalating tension"
+    - "Short, punchy scenes during action sequences"
+    - "Moments of calm before major revelations"
+  
+  structure:
+    act_one:
+      - "Establish protagonist in normal world"
+      - "Introduce inciting incident or threat"
+      - "First plot point launches main conflict"
+    act_two:
+      - "Escalating danger and obstacles"
+      - "Red herrings and misdirection"
+      - "Midpoint revelation or major setback"
+      - "Crisis point where stakes are highest"
+    act_three:
+      - "Final confrontation or chase"
+      - "Resolution of main threat"
+      - "Denouement showing new normal"
+
+  character_archetypes:
+    - "Reluctant hero/protagonist"
+    - "Mysterious antagonist"
+    - "Authority figure (helpful or corrupt)"
+    - "Innocent victim or love interest"
+
+  common_elements:
+    - "Ticking clock or deadline"
+    - "Cat and mouse dynamics"
+    - "Plot twists and revelations"
+    - "High stakes (life/death/world-ending)"
+    - "Paranoia and distrust"
+
+authenticity_markers:
+  required:
+    - tension_curve: "Consistent rising action with brief respites"
+    - stakes: "Clear consequences for failure"
+    - pacing: "Maintains momentum throughout"
+  
+  optional:
+    - "Chase sequences"
+    - "Hidden identities"
+    - "Double agents or betrayals"
+    - "Technology or weapon threats"
+
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

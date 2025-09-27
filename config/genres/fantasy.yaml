@@ -1,0 +1,47 @@
+# Fantasy Genre Template
+name: "fantasy"
+description: "Stories set in magical worlds with supernatural elements"
+
+conventions:
+  pacing:
+    - "World-building balanced with adventure"
+    - "Magic system reveals and discoveries"
+    - "Epic quests with escalating stakes"
+  
+  structure:
+    act_one:
+      - "Establish magical world and rules"
+      - "Introduce protagonist's ordinary world"
+      - "Call to adventure or magical incident"
+    act_two:
+      - "Journey into magical realm"
+      - "Learning magic system and rules"
+      - "Trials and magical challenges"
+      - "Dark lord or magical threat emerges"
+    act_three:
+      - "Final magical confrontation"
+      - "Hero uses learned powers/wisdom"
+      - "Restoration of magical balance"
+
+  character_archetypes:
+    - "Chosen one or reluctant hero"
+    - "Wise mentor or wizard"
+    - "Dark lord or evil sorcerer"
+    - "Magical companion or familiar"
+
+  common_elements:
+    - "Magic systems and spells"
+    - "Mythical creatures and beings"
+    - "Quests and prophecies"
+    - "Medieval or ancient settings"
+    - "Good vs evil conflict"
+
+authenticity_markers:
+  required:
+    - world_building: "Consistent magical rules and logic"
+    - wonder: "Sense of magic and discovery"
+    - hero_journey: "Character growth through trials"
+  
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

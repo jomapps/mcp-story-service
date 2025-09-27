@@ -1,0 +1,47 @@
+# Mystery Genre Template
+name: "mystery"
+description: "Stories involving puzzles, crimes, or unexplained events to be solved"
+
+conventions:
+  pacing:
+    - "Gradual revelation of clues"
+    - "Red herrings and misdirection"
+    - "Building suspense to revelation"
+  
+  structure:
+    act_one:
+      - "Crime or mystery is established"
+      - "Introduce detective or protagonist"
+      - "Initial investigation begins"
+    act_two:
+      - "Gathering clues and evidence"
+      - "Interviewing suspects and witnesses"
+      - "False leads and complications"
+      - "Deeper mystery or second crime"
+    act_three:
+      - "Final clues come together"
+      - "Confrontation and revelation"
+      - "Resolution and explanation"
+
+  character_archetypes:
+    - "Detective or investigator"
+    - "Prime suspect or red herring"
+    - "Victim or person in danger"
+    - "Informant or witness"
+
+  common_elements:
+    - "Clues and evidence"
+    - "Suspects with motives"
+    - "Plot twists and revelations"
+    - "Logical deduction"
+    - "Hidden secrets revealed"
+
+authenticity_markers:
+  required:
+    - fair_play: "All clues available to reader/audience"
+    - logical_solution: "Resolution follows established evidence"
+    - satisfying_reveal: "Surprise that makes sense in hindsight"
+  
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

@@ -1,0 +1,53 @@
+# Comedy Genre Template
+name: "comedy"
+description: "Stories designed to entertain and amuse through humor"
+
+conventions:
+  pacing:
+    - "Quick wit and rapid-fire dialogue"
+    - "Comic timing and beats"
+    - "Escalating absurd situations"
+  
+  structure:
+    act_one:
+      - "Establish comic character or situation"
+      - "Set up the central comedic premise"
+      - "Introduce obstacles to protagonist's goal"
+    act_two:
+      - "Escalating comedic complications"
+      - "Misunderstandings and mistaken identity"
+      - "Character flaws create humor"
+      - "Series of increasingly absurd events"
+    act_three:
+      - "Comedic climax with maximum chaos"
+      - "Resolution through character growth"
+      - "Happy ending with lessons learned"
+
+  character_archetypes:
+    - "Fish out of water protagonist"
+    - "Straight man/comedic foil"
+    - "Eccentric supporting characters"
+    - "Authority figure to rebel against"
+
+  common_elements:
+    - "Physical comedy and slapstick"
+    - "Wordplay and witty dialogue"
+    - "Irony and comic misunderstandings"
+    - "Exaggerated character traits"
+    - "Happy endings"
+
+authenticity_markers:
+  required:
+    - humor_consistency: "Maintains comedic tone throughout"
+    - character_likability: "Protagonists remain sympathetic despite flaws"
+    - timing: "Proper setup and payoff for jokes"
+  
+  optional:
+    - "Running gags"
+    - "Breaking the fourth wall"
+    - "Parody or satire elements"
+    - "Romantic subplot"
+
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

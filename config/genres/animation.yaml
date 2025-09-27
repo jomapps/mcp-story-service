@@ -1,0 +1,47 @@
+# Animation Genre Template
+name: "animation"
+description: "Stories told through animated visuals with unique creative possibilities"
+
+conventions:
+  pacing:
+    - "Visual storytelling with animated sequences"
+    - "Exaggerated emotions and expressions"
+    - "Creative transitions and visual metaphors"
+  
+  structure:
+    act_one:
+      - "Establish animated world and rules"
+      - "Introduce characters through visual design"
+      - "Set up central conflict or journey"
+    act_two:
+      - "Explore animated world's possibilities"
+      - "Character development through visual expression"
+      - "Creative problem-solving sequences"
+      - "Visual spectacle and imagination"
+    act_three:
+      - "Climactic animated sequence"
+      - "Resolution using animated medium's strengths"
+      - "Emotional payoff through visual storytelling"
+
+  character_archetypes:
+    - "Animated protagonist with distinct design"
+    - "Colorful supporting characters"
+    - "Villain with exaggerated traits"
+    - "Mentor or guide figure"
+
+  common_elements:
+    - "Exaggerated character expressions"
+    - "Impossible physics and actions"
+    - "Colorful and imaginative worlds"
+    - "Musical numbers or sequences"
+    - "Visual comedy and sight gags"
+
+authenticity_markers:
+  required:
+    - visual_storytelling: "Story told effectively through animation"
+    - character_design: "Memorable and expressive character designs"
+    - creative_use: "Utilizes animation's unique possibilities"
+  
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

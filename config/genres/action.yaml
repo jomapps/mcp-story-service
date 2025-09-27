@@ -1,0 +1,47 @@
+# Action Genre Template
+name: "action"
+description: "High-energy stories with physical confrontations and excitement"
+
+conventions:
+  pacing:
+    - "Fast-paced with frequent action sequences"
+    - "Minimal exposition during action"
+    - "Build-up, action, recovery pattern"
+  
+  structure:
+    act_one:
+      - "Establish hero's abilities"
+      - "Inciting incident with immediate danger"
+      - "Clear antagonist and stakes"
+    act_two:
+      - "Escalating action sequences"
+      - "Hero faces increasing challenges"
+      - "Setbacks and obstacles"
+      - "Major action set piece"
+    act_three:
+      - "Final confrontation/battle"
+      - "Hero overcomes through skill/determination"
+      - "Victory and resolution"
+
+  character_archetypes:
+    - "Skilled hero/warrior"
+    - "Powerful antagonist"
+    - "Mentor or ally"
+    - "Person to rescue/protect"
+
+  common_elements:
+    - "Chase sequences"
+    - "Fight scenes and combat"
+    - "Explosions and destruction"
+    - "High stakes and danger"
+    - "Physical prowess over intellect"
+
+authenticity_markers:
+  required:
+    - action_clarity: "Clear choreography and spatial awareness"
+    - escalation: "Increasing intensity of action sequences"
+    - stakes: "Personal consequences for hero"
+  
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

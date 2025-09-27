@@ -1,0 +1,134 @@
+# Plot Devices Pattern Library
+name: "plot_devices"
+description: "Common narrative techniques and storytelling devices"
+
+pattern_type: "narrative_technique"
+
+devices:
+  chekovs_gun:
+    name: "Chekhov's Gun"
+    description: "Element introduced early must be used later"
+    validation_rules:
+      - "Setup element must appear in first half"
+      - "Payoff must occur before story end"
+      - "Usage must be significant to plot"
+    confidence_impact: 0.15
+
+  red_herring:
+    name: "Red Herring"
+    description: "Misleading clue or information"
+    validation_rules:
+      - "Must seem plausible initially"
+      - "Should misdirect without being unfair"
+      - "Real solution must be available"
+    confidence_impact: -0.05
+
+  deus_ex_machina:
+    name: "Deus Ex Machina"
+    description: "Unexpected power or event saves situation"
+    validation_rules:
+      - "Solution comes from outside established rules"
+      - "No prior setup or foreshadowing"
+      - "Resolves seemingly impossible situation"
+    confidence_impact: -0.25
+
+  foreshadowing:
+    name: "Foreshadowing"
+    description: "Hints about future events"
+    validation_rules:
+      - "Must hint at significant future event"
+      - "Should be subtle but noticeable in hindsight"
+      - "Payoff must fulfill the promise"
+    confidence_impact: 0.10
+
+  plant_and_payoff:
+    name: "Plant and Payoff"
+    description: "Setup that pays off later"
+    validation_rules:
+      - "Plant must be clear but not obvious"
+      - "Payoff must use the planted element"
+      - "Gap between plant and payoff creates satisfaction"
+    confidence_impact: 0.20
+
+  mcguffin:
+    name: "MacGuffin"
+    description: "Object that drives plot but has little intrinsic value"
+    validation_rules:
+      - "Must motivate character actions"
+      - "Specific nature less important than pursuit"
+      - "Should create conflict between characters"
+    confidence_impact: 0.05
+
+  false_protagonist:
+    name: "False Protagonist"
+    description: "Character appears to be main character but isn't"
+    validation_rules:
+      - "Must seem like genuine protagonist initially"
+      - "Real protagonist must be present early"
+      - "Switch must be meaningful to story"
+    confidence_impact: 0.10
+
+  unreliable_narrator:
+    name: "Unreliable Narrator"
+    description: "Narrator whose credibility is compromised"
+    validation_rules:
+      - "Must provide clues to unreliability"
+      - "Truth must be discoverable"
+      - "Revelation must recontextualize story"
+    confidence_impact: 0.15
+
+  frame_narrative:
+    name: "Frame Narrative"
+    description: "Story within a story structure"
+    validation_rules:
+      - "Frame must serve narrative purpose"
+      - "Inner story must relate to frame"
+      - "Both levels must be engaging"
+    confidence_impact: 0.05
+
+  in_medias_res:
+    name: "In Medias Res"
+    description: "Story begins in middle of action"
+    validation_rules:
+      - "Must start at dramatic moment"
+      - "Background filled in later"
+      - "Opening must hook audience"
+    confidence_impact: 0.10
+
+pacing_patterns:
+  rising_action:
+    description: "Escalating tension and conflict"
+    validation: "Each event must raise stakes"
+    
+  falling_action:
+    description: "Resolution of conflicts after climax"
+    validation: "Must address all major plot threads"
+    
+  cliffhanger:
+    description: "Ending with unresolved tension"
+    validation: "Must create genuine suspense"
+    
+  slow_burn:
+    description: "Gradual build-up of tension"
+    validation: "Must maintain audience interest"
+
+conflict_patterns:
+  man_vs_man:
+    description: "Character against another character"
+    validation: "Both sides must have clear motivations"
+    
+  man_vs_self:
+    description: "Internal psychological conflict"
+    validation: "Must externalize internal struggle"
+    
+  man_vs_nature:
+    description: "Character against natural forces"
+    validation: "Nature must be active antagonist"
+    
+  man_vs_society:
+    description: "Character against social norms"
+    validation: "Society must have clear opposing values"
+
+confidence_thresholds:
+  minimum: 0.70
+  excellent: 0.85

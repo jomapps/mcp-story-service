@@ -1,0 +1,47 @@
+# War Genre Template
+name: "war"
+description: "Stories set during armed conflicts focusing on combat and its effects"
+
+conventions:
+  pacing:
+    - "Alternating between action and quiet moments"
+    - "Building tension before battles"
+    - "Emotional beats between combat"
+  
+  structure:
+    act_one:
+      - "Establish war context and stakes"
+      - "Introduce soldiers and unit"
+      - "First taste of combat or deployment"
+    act_two:
+      - "Escalating battles and missions"
+      - "Character bonds and losses"
+      - "Moral complexity of war revealed"
+      - "Major battle or turning point"
+    act_three:
+      - "Final mission or decisive battle"
+      - "Personal sacrifice for greater good"
+      - "Resolution and war's aftermath"
+
+  character_archetypes:
+    - "Reluctant soldier or veteran"
+    - "Commanding officer or leader"
+    - "Enemy combatant or civilian"
+    - "War correspondent or medic"
+
+  common_elements:
+    - "Combat sequences and battles"
+    - "Military hierarchy and orders"
+    - "Brotherhood among soldiers"
+    - "Moral ambiguity of warfare"
+    - "Sacrifice and heroism"
+
+authenticity_markers:
+  required:
+    - realism: "Authentic portrayal of combat and military life"
+    - human_cost: "Shows emotional and physical toll of war"
+    - moral_complexity: "Explores ethical dilemmas of warfare"
+  
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

@@ -1,0 +1,53 @@
+# Drama Genre Template
+name: "drama"
+description: "Character-driven stories focusing on emotional conflicts and human relationships"
+
+conventions:
+  pacing:
+    - "Character development over action"
+    - "Emotional beats drive story progression"
+    - "Introspective moments and dialogue"
+  
+  structure:
+    act_one:
+      - "Establish characters and relationships"
+      - "Introduce emotional conflict or dilemma"
+      - "Set up character wants vs needs"
+    act_two:
+      - "Explore character relationships"
+      - "Internal and external obstacles"
+      - "Character growth through conflict"
+      - "Emotional climax or breakdown"
+    act_three:
+      - "Character makes crucial decision"
+      - "Resolution of emotional arc"
+      - "New understanding or acceptance"
+
+  character_archetypes:
+    - "Flawed protagonist seeking redemption"
+    - "Mentor or wise guide"
+    - "Family member or friend in conflict"
+    - "Love interest or romantic partner"
+
+  common_elements:
+    - "Family dynamics"
+    - "Moral dilemmas"
+    - "Coming of age themes"
+    - "Loss and grief"
+    - "Social issues"
+
+authenticity_markers:
+  required:
+    - character_depth: "Multi-dimensional characters with clear motivations"
+    - emotional_truth: "Realistic human emotions and reactions"
+    - dialogue: "Natural, character-specific speech patterns"
+  
+  optional:
+    - "Symbolism and metaphor"
+    - "Flashbacks to reveal backstory"
+    - "Internal monologue"
+    - "Realistic settings"
+
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

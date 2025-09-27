@@ -1,0 +1,101 @@
+# Character Arc Pattern Library
+name: "character_arcs"
+description: "Common character development patterns and transformations"
+
+pattern_type: "character_development"
+
+arc_types:
+  positive_change:
+    name: "Positive Change Arc"
+    description: "Character overcomes flaws and grows"
+    stages:
+      - name: "lie_believed"
+        description: "Character believes something untrue about world/self"
+        validation: "Must establish character's false belief"
+      - name: "want_vs_need"
+        description: "Character wants something but needs something else"
+        validation: "Want and need must be in conflict"
+      - name: "first_incident"
+        description: "Event challenges character's belief system"
+        validation: "Must create doubt in character's worldview"
+      - name: "first_pinch_point"
+        description: "Antagonistic force opposes character"
+        validation: "Must show consequence of maintaining lie"
+      - name: "midpoint"
+        description: "Character glimpses truth but isn't ready"
+        validation: "Must show growth opportunity"
+      - name: "second_pinch_point"
+        description: "Character faces greater opposition"
+        validation: "Must escalate consequences"
+      - name: "third_plot_point"
+        description: "Character's lie is fully exposed"
+        validation: "Must force character to confront truth"
+      - name: "climax"
+        description: "Character chooses truth over lie"
+        validation: "Must demonstrate character growth"
+
+  flat_arc:
+    name: "Flat Arc"
+    description: "Character already has truth and changes world"
+    stages:
+      - name: "character_has_truth"
+        description: "Character understands important truth"
+        validation: "Must establish character's wisdom"
+      - name: "world_challenges_truth"
+        description: "External world opposes character's beliefs"
+        validation: "Must show conflict with world"
+      - name: "character_doubts"
+        description: "Character temporarily questions truth"
+        validation: "May be brief but shows human fallibility"
+      - name: "character_reaffirms"
+        description: "Character holds fast to truth"
+        validation: "Must show conviction and strength"
+      - name: "world_changes"
+        description: "Character's truth transforms others"
+        validation: "Must show positive influence on world"
+
+  negative_arc:
+    name: "Negative Arc"
+    description: "Character falls deeper into lies and flaws"
+    stages:
+      - name: "character_rejects_truth"
+        description: "Character chooses lie over truth"
+        validation: "Must show clear choice"
+      - name: "justification"
+        description: "Character rationalizes their choice"
+        validation: "Must show self-deception"
+      - name: "attack_on_truth"
+        description: "Character actively opposes truth"
+        validation: "Must show growing corruption"
+      - name: "point_of_no_return"
+        description: "Character commits to the lie"
+        validation: "Must show irreversible choice"
+      - name: "destruction"
+        description: "Character's choices lead to downfall"
+        validation: "Must show consequences of lies"
+
+relationship_arcs:
+  romantic:
+    stages: ["attraction", "conflict", "separation", "reunion"]
+    validation_rules:
+      - "Must show genuine chemistry"
+      - "Conflict must be meaningful"
+      - "Reunion must be earned"
+
+  friendship:
+    stages: ["meeting", "bonding", "testing", "loyalty"]
+    validation_rules:
+      - "Must show mutual support"
+      - "Testing must threaten relationship"
+      - "Loyalty must be demonstrated"
+
+  mentor_student:
+    stages: ["teaching", "learning", "independence", "surpassing"]
+    validation_rules:
+      - "Mentor must have wisdom to share"
+      - "Student must grow and learn"
+      - "Independence must be earned"
+
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

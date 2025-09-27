@@ -1,0 +1,47 @@
+# Western Genre Template
+name: "western"
+description: "Stories set in the American frontier, typically 19th century"
+
+conventions:
+  pacing:
+    - "Slow build to gunfight showdowns"
+    - "Travel and journey sequences"
+    - "Tension builds to climactic confrontation"
+  
+  structure:
+    act_one:
+      - "Establish frontier setting and conflict"
+      - "Introduce gunslinger or cowboy hero"
+      - "Call to action or injustice revealed"
+    act_two:
+      - "Journey across frontier landscape"
+      - "Encounters with outlaws or natives"
+      - "Building to final confrontation"
+      - "Hero faces moral choices"
+    act_three:
+      - "Final gunfight or showdown"
+      - "Justice served or order restored"
+      - "Hero rides into sunset"
+
+  character_archetypes:
+    - "Lone gunslinger or sheriff"
+    - "Outlaw or cattle baron villain"
+    - "Frontier woman or saloon girl"
+    - "Wise Native American or old-timer"
+
+  common_elements:
+    - "Frontier towns and landscapes"
+    - "Horseback chases and gunfights"
+    - "Cattle drives or gold mining"
+    - "Law vs lawlessness themes"
+    - "Man vs nature conflicts"
+
+authenticity_markers:
+  required:
+    - frontier_atmosphere: "Authentic Old West setting and tone"
+    - moral_clarity: "Clear distinction between right and wrong"
+    - individualism: "Self-reliant protagonist facing challenges alone"
+  
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90

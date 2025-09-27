@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(..specifyscriptspowershellcreate-new-feature.ps1 -Json \"I have put app idea in D:\\Projects\\mcp-story-service\\ this is a standalone mcp server meant to work with the whole system of apps as described in docs\\thoughts\\Domain-configs.md\")",
+      "Bash(powershell:*)",
+      "Bash(..specifyscriptspowershellupdate-agent-context.ps1 -AgentType claude)",
+      "mcp__byterover-mcp__byterover-retrieve-knowledge",
+      "mcp__byterover-mcp__byterover-store-knowledge"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

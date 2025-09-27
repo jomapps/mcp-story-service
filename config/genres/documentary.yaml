@@ -1,0 +1,47 @@
+# Documentary Genre Template
+name: "documentary"
+description: "Non-fiction stories that document reality and real-world subjects"
+
+conventions:
+  pacing:
+    - "Information revealed gradually"
+    - "Building understanding through evidence"
+    - "Emotional and factual beats"
+  
+  structure:
+    act_one:
+      - "Introduce subject and central question"
+      - "Establish stakes and importance"
+      - "Begin investigation or exploration"
+    act_two:
+      - "Gather evidence and testimony"
+      - "Present multiple perspectives"
+      - "Reveal complications and depth"
+      - "Build understanding of complexity"
+    act_three:
+      - "Synthesize findings and evidence"
+      - "Draw conclusions or insights"
+      - "Call to action or reflection"
+
+  character_archetypes:
+    - "Expert or authority figure"
+    - "Witness or participant"
+    - "Filmmaker or narrator"
+    - "Subject of investigation"
+
+  common_elements:
+    - "Interviews and testimonials"
+    - "Archival footage and documents"
+    - "Expert analysis and commentary"
+    - "Real-world locations and events"
+    - "Educational or investigative purpose"
+
+authenticity_markers:
+  required:
+    - factual_accuracy: "Verifiable information and reliable sources"
+    - balanced_perspective: "Fair representation of different viewpoints"
+    - educational_value: "Provides insight or understanding of subject"
+  
+confidence_thresholds:
+  minimum: 0.75
+  excellent: 0.90
