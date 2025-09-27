@@ -1,54 +1,82 @@
 import pytest
-from mcp.mcp_server import McpServer
-from mcp.mcp_client import McpClient
 import json
 import os
+import sys
+
+sys.path.append(".")
+
+from src.services.session_manager import StorySessionManager
+from src.mcp.handlers.session_handler import SessionHandler
+from src.lib.redis_client import RedisClient
 
 # Get the absolute path to the contract file
-CONTRACT_FILE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'specs', '001-i-have-put', 'contracts', 'story-analysis-tools.json'))
+CONTRACT_FILE = os.path.abspath(
+    os.path.join(
+        os.path.dirname(__file__),
+        "..",
+        "..",
+        "specs",
+        "001-i-have-put",
+        "contracts",
+        "story-analysis-tools.json",
+    )
+)
 
 # Load the contract
-with open(CONTRACT_FILE, 'r') as f:
+with open(CONTRACT_FILE, "r") as f:
     contract = json.load(f)
 
 # Get the schema for the get_story_session tool
-tool_schema = contract['mcp_tools']['get_story_session']
+tool_schema = contract["mcp_tools"]["get_story_session"]
+
 
 @pytest.mark.asyncio
 async def test_get_story_session_contract():
     """
     Tests that the get_story_session tool conforms to its contract.
     """
-    # Mock the tool implementation
-    async def mock_get_story_session(project_id):
-        # In a real test, you would validate the input against the schema
-        # and return a mock response that conforms to the output schema.
-        return {
-            "session": {
-                "session_id": "session-123",
-                "project_id": project_id,
-                "active_story_arcs": [],
-                "last_activity": "2025-09-27T10:00:00Z",
-                "session_status": "active",
-                "process_isolation_active": True,
-                "persistence_policy": "until_completion"
-            }
-        }
+    # Initialize actual dependencies
+    redis_client = RedisClient()
+    session_manager = StorySessionManager(redis_client)
+    session_handler = SessionHandler(session_manager)
 
-    # Create a mock server and register the tool
-    server = McpServer()
-    server.register_tool("get_story_session", mock_get_story_session, tool_schema)
+    # Test data that conforms to the input schema
+    test_project_id = "test-project"
 
-    # Create a client and connect to the server
-    async with McpClient() as client:
-        await client.connect_to_server(server)
+    # Call the actual handler implementation
+    result = await session_handler.get_story_session(project_id=test_project_id)
 
-        # Call the tool with valid parameters
-        result = await client.call_tool(
-            "get_story_session",
-            project_id="test-project"
-        )
+    # Validate the result conforms to the output schema
+    assert "session" in result
+    session = result["session"]
 
-        # In a real test, you would validate the result against the output schema
-        # using a library like jsonschema.
-        assert "session" in result
+    # Check required fields from the contract
+    assert "session_id" in session
+    assert "project_id" in session
+    assert "active_story_arcs" in session
+    assert "last_activity" in session
+    assert "session_status" in session
+    assert "process_isolation_active" in session
+    assert "persistence_policy" in session
+
+    # Validate data types
+    assert isinstance(session["session_id"], str)
+    assert isinstance(session["project_id"], str)
+    assert isinstance(session["active_story_arcs"], list)
+    assert isinstance(session["last_activity"], str)
+    assert isinstance(session["session_status"], str)
+    assert isinstance(session["process_isolation_active"], bool)
+    assert isinstance(session["persistence_policy"], str)
+
+    # Validate project ID matches
+    assert session["project_id"] == test_project_id
+
+    # Validate session status is one of expected values
+    assert session["session_status"] in ["active", "inactive", "completed"]
+
+    # Validate persistence policy is one of expected values
+    assert session["persistence_policy"] in [
+        "until_completion",
+        "ephemeral",
+        "persistent",
+    ]
