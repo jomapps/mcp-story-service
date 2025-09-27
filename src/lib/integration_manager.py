@@ -9,6 +9,16 @@ class IntegrationManager:
         self.task_service_url = task_service_url
         self.client = httpx.AsyncClient()
 
+    async def close(self):
+        """Close the HTTP client and clean up resources."""
+        await self.client.aclose()
+
+    async def __aenter__(self):
+        return self
+
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        await self.close()
+
     async def coordinate_with_brain(self, data: Dict[str, Any]) -> Dict[str, Any]:
         """
         Coordinates with the Brain service.

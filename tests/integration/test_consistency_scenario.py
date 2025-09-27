@@ -11,7 +11,14 @@ async def test_consistency_validation_scenario():
     """
     # Initialize dependencies
     consistency_validator = ConsistencyValidator()
-    consistency_handler = ConsistencyHandler(consistency_validator)
+
+    # Create a lightweight session manager for testing
+    from src.services.session.manager import StorySessionManager
+    from unittest.mock import Mock
+    mock_redis_client = Mock()
+    session_manager = StorySessionManager(mock_redis_client)
+
+    consistency_handler = ConsistencyHandler(consistency_validator, session_manager)
 
     # Create a mock server and register the tool
     server = McpServer()

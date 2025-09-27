@@ -13,7 +13,14 @@ async def test_genre_pattern_application_scenario():
     # Initialize dependencies
     genre_loader = GenreLoader(config_path="config/genres")
     genre_analyzer = GenreAnalyzer(genre_loader)
-    genre_patterns_handler = GenrePatternsHandler(genre_analyzer)
+
+    # Create a lightweight session manager for testing
+    from src.services.session.manager import StorySessionManager
+    from unittest.mock import Mock
+    mock_redis_client = Mock()
+    session_manager = StorySessionManager(mock_redis_client)
+
+    genre_patterns_handler = GenrePatternsHandler(genre_analyzer, session_manager)
 
     # Create a mock server and register the tool
     server = McpServer()

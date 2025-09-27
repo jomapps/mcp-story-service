@@ -4,8 +4,11 @@
 
 The MCP Story Service is a standalone narrative intelligence server that provides AI agents with comprehensive story analysis capabilities. This service follows the Model Context Protocol (MCP) and offers tools for story structure analysis, plot validation, consistency checking, genre pattern matching, and pacing analysis.
 
+> **⚠️ DEVELOPMENT STATUS**: This service is currently in active development. Many features are implemented as mock/placeholder implementations. See the [Implementation Status](#implementation-status) section for details on what's complete vs. in development.
+
 ## Table of Contents
 
+- [Implementation Status](#implementation-status)
 - [Quick Start](#quick-start)
 - [Service Architecture](#service-architecture)
 - [Available Tools](#available-tools)
@@ -14,6 +17,38 @@ The MCP Story Service is a standalone narrative intelligence server that provide
 - [Best Practices](#best-practices)
 - [Examples](#examples)
 
+## Implementation Status
+
+### ✅ **Completed Features**
+- **MCP Server Core**: Basic MCP protocol server with tool registration
+- **Session Management**: Story session creation and persistence (with Redis backend)
+- **Genre Configuration**: 15+ genre templates loaded from YAML files
+- **Basic Tool Handlers**: All 6 MCP tools have handler implementations
+- **Data Models**: Complete story entities (Arc, Thread, Beat, Journey, etc.)
+- **Project Structure**: Full source code organization and configuration
+
+### 🔄 **Mock/Placeholder Implementations**
+> **These features have basic structure but need full implementation:**
+
+- **Story Structure Analysis**: Currently returns hardcoded three-act structure
+- **Plot Thread Tracking**: Basic thread lifecycle tracking with mock analysis
+- **Consistency Validation**: Simple timeline validation, needs comprehensive rule engine
+- **Genre Pattern Matching**: Basic convention checking, needs full pattern analysis
+- **Pacing Calculation**: Mock tension curve generation, needs real analysis algorithms
+- **Process Isolation**: Session isolation framework exists but not fully implemented
+
+### ❌ **Missing Features**
+- **Real Analysis Algorithms**: All core analysis logic is placeholder/mock
+- **Advanced Error Handling**: Basic error handling, needs comprehensive coverage
+- **Performance Optimization**: No caching, optimization, or performance tuning
+- **Integration Testing**: Limited integration test coverage
+- **Production Deployment**: No deployment configuration or Docker setup
+
+### 🐛 **Known Issues**
+- **Parameter Handling Bug**: MCP tool handlers expect individual parameters but server passes arguments object - needs fixing
+- **Session Serialization**: Redis session storage may have serialization issues with complex objects
+- **Genre Template Loading**: Error handling for missing or malformed genre YAML files needs improvement
+
 ## Quick Start
 
 ### Prerequisites
@@ -21,20 +56,31 @@ The MCP Story Service is a standalone narrative intelligence server that provide
 - Python 3.11+
 - Redis server (for session management)
 - MCP-compatible client
+- Poetry (for dependency management)
 
 ### Installation
+
+> **⚠️ NOTE**: This project uses Poetry for dependency management, not pip with requirements.txt
 
 ```bash
 # Clone the repository
 git clone <repository-url>
 cd mcp-story-service
 
-# Install dependencies
-pip install -r requirements.txt
+# Install Poetry if not already installed
+curl -sSL https://install.python-poetry.org | python3 -
+
+# Install dependencies using Poetry
+poetry install
+
+# Start Redis server (required for session management)
+redis-server
 
 # Start the service
-python -m src.mcp.server
+poetry run python -m src.mcp.server
 ```
+
+> **🚧 DEVELOPMENT STATUS**: The service will start but most analysis features return mock data. See [Implementation Status](#implementation-status) for details.
 
 ### Basic Usage
 
@@ -63,6 +109,8 @@ thriller, drama, comedy, action, horror, romance, sci-fi, fantasy, mystery, west
 
 **Purpose**: Create or retrieve a story analysis session for project continuity.
 
+**Implementation Status**: ✅ **Fully Implemented**
+
 **Parameters**:
 ```json
 {
@@ -90,11 +138,15 @@ thriller, drama, comedy, action, horror, romance, sci-fi, fantasy, mystery, west
 - Sessions persist until explicit termination
 - Each project gets independent analysis context
 
+**⚠️ Current Implementation Note**: Due to a parameter handling bug, the actual tool call format may differ from documentation. The handlers expect individual parameters but receive an arguments object.
+
 ---
 
 ### 2. analyze_story_structure
 
 **Purpose**: Analyze story structure and identify three-act progression with genre-specific variations.
+
+**Implementation Status**: 🔄 **Mock Implementation** - Returns hardcoded three-act structure with placeholder confidence scores. Real analysis algorithms not yet implemented.
 
 **Parameters**:
 ```json
@@ -166,6 +218,8 @@ thriller, drama, comedy, action, horror, romance, sci-fi, fantasy, mystery, west
 
 **Purpose**: Track plot threads across multiple episodes and identify lifecycle status.
 
+**Implementation Status**: 🔄 **Mock Implementation** - Basic thread lifecycle tracking with hardcoded confidence scores. Advanced thread analysis and dependency tracking not implemented.
+
 **Parameters**:
 ```json
 {
@@ -234,6 +288,8 @@ thriller, drama, comedy, action, horror, romance, sci-fi, fantasy, mystery, west
 ### 4. validate_consistency
 
 **Purpose**: Validate narrative consistency and detect plot holes, timeline issues, character contradictions.
+
+**Implementation Status**: 🔄 **Basic Implementation** - Simple timeline validation only. Comprehensive consistency rules, character contradiction detection, and world-building validation not yet implemented.
 
 **Parameters**:
 ```json
@@ -316,6 +372,8 @@ thriller, drama, comedy, action, horror, romance, sci-fi, fantasy, mystery, west
 
 **Purpose**: Apply genre-specific storytelling conventions and provide authenticity recommendations.
 
+**Implementation Status**: 🔄 **Basic Implementation** - Loads genre templates and performs basic convention checking. Advanced pattern matching, authenticity scoring, and detailed recommendations not fully implemented.
+
 **Parameters**:
 ```json
 {
@@ -389,6 +447,8 @@ thriller, drama, comedy, action, horror, romance, sci-fi, fantasy, mystery, west
 
 **Purpose**: Calculate story pacing and tension curves to identify pacing issues.
 
+**Implementation Status**: 🔄 **Mock Implementation** - Returns basic tension curve from input beats. Advanced pacing analysis, rhythm detection, and genre-specific pacing recommendations not implemented.
+
 **Parameters**:
 ```json
 {
@@ -439,6 +499,8 @@ thriller, drama, comedy, action, horror, romance, sci-fi, fantasy, mystery, west
 ```
 
 ## Workflows
+
+> **⚠️ WORKFLOW STATUS**: These workflows are documented based on the intended design. Due to mock implementations, actual results will be placeholder data until full implementation is complete.
 
 ### Workflow 1: Complete Story Analysis
 
@@ -587,28 +649,30 @@ graph TD
 
 ### Example 1: Analyzing a Thriller Short Story
 
+> **⚠️ EXAMPLE STATUS**: This example will work with the current implementation but will return mock/placeholder data.
+
 ```python
-# 1. Create session
+# 1. Create session (✅ Works with real implementation)
 session_response = await mcp_client.call_tool("get_story_session", {
     "project_id": "thriller-short-001"
 })
 
-# 2. Analyze structure
+# 2. Analyze structure (🔄 Returns mock three-act structure)
 structure_response = await mcp_client.call_tool("analyze_story_structure", {
     "story_content": "Detective finds body. Investigation reveals conspiracy. Final confrontation.",
     "genre": "thriller",
     "project_id": "thriller-short-001"
 })
 
-# 3. Check genre compliance
+# 3. Check genre compliance (🔄 Returns basic genre template matching)
 genre_response = await mcp_client.call_tool("apply_genre_patterns", {
     "project_id": "thriller-short-001",
     "genre": "thriller"
 })
 
-# 4. Validate results
+# 4. Validate results (⚠️ Will always show mock confidence scores)
 if structure_response["arc_analysis"]["act_structure"]["confidence_score"] >= 0.75:
-    print("Story structure meets quality threshold")
+    print("Story structure meets quality threshold")  # Will likely always print this
 else:
     print("Improvements needed:", structure_response["recommendations"])
 ```
@@ -693,50 +757,75 @@ for violation in violations:
 
 ## Integration Notes
 
+> **⚠️ INTEGRATION WARNING**: Due to mock implementations, integration should be limited to development/testing until full implementation is complete.
+
 ### For AI Agents
 
 - Use structured prompts to extract story elements
-- Implement retry logic for low confidence scores
-- Cache session IDs for project continuity
-- Monitor confidence trends across iterations
+- ⚠️ **Mock Data**: Confidence scores are currently hardcoded - don't rely on them for real decisions
+- Cache session IDs for project continuity (✅ This works correctly)
+- ⚠️ **Limited Analysis**: Current analysis is placeholder - implement fallback logic
 
 ### For Production Systems
 
-- Implement proper error handling and timeouts
-- Use connection pooling for high-volume requests
-- Monitor service health and response times
-- Implement circuit breaker patterns for resilience
+- ❌ **Not Production Ready**: Service has mock implementations and limited error handling
+- ⚠️ **Redis Required**: Ensure Redis server is running for session management
+- ⚠️ **No Performance Optimization**: No caching, connection pooling, or optimization implemented
+- ❌ **Limited Monitoring**: Basic error handling only, no comprehensive monitoring
 
 ### For Development Teams
 
-- Use the service during story development phases
-- Integrate with content management systems
-- Set up automated quality gates based on confidence scores
-- Create dashboards for story quality metrics
+- ✅ **Good for Prototyping**: Service structure is solid for development and testing
+- ⚠️ **Mock Results**: All analysis results are placeholder data
+- ❌ **No Quality Gates**: Confidence thresholds are not meaningful with mock data
+- 🔄 **Incremental Development**: Can be used to test integration patterns while real analysis is developed
 
 ## Support and Troubleshooting
 
 ### Performance Considerations
 
-- Service handles up to 10 concurrent requests efficiently
-- Complex analyses may take 2-3 seconds
-- Use appropriate timeouts (recommended: 10 seconds)
-- Sessions are lightweight and can be created frequently
+- ⚠️ **Mock Performance**: Current response times are fast due to mock implementations
+- ✅ **Session Management**: Sessions are lightweight and can be created frequently
+- ⚠️ **No Load Testing**: Concurrent request handling not yet tested
+- 🔄 **Future Optimization**: Real analysis algorithms will require performance tuning
 
 ### Common Issues
 
-1. **Low confidence scores**: Review story structure and completeness
-2. **Session timeouts**: Check Redis connection and service health
-3. **Genre mismatch**: Verify target genre matches story content
-4. **Memory issues**: Monitor service resource usage under load
+1. **Missing Dependencies**: Ensure Poetry and Redis are installed and running
+2. **Import Errors**: Run `poetry install` to install all dependencies
+3. **Redis Connection**: Verify Redis server is running on default port (6379)
+4. **Mock Data Confusion**: Remember that analysis results are placeholder data
+5. **Genre Template Errors**: Ensure config/genres directory contains YAML files
 
 ### Getting Help
 
 - Check service logs for detailed error information
-- Verify all required parameters are provided
-- Ensure story content is complete and well-formed
-- Test with simpler content first to isolate issues
+- Verify Redis server is running: `redis-cli ping` should return "PONG"
+- Ensure all required parameters are provided in tool calls
+- ⚠️ **Development Status**: Many issues may be due to incomplete implementations
+
+## Development Roadmap
+
+### Next Steps for Full Implementation
+
+1. **Real Analysis Algorithms**
+   - Implement actual story structure analysis using NLP
+   - Build comprehensive consistency validation rules
+   - Develop genre-specific pattern matching algorithms
+   - Create advanced pacing analysis with tension curve calculation
+
+2. **Production Readiness**
+   - Add comprehensive error handling and logging
+   - Implement performance optimization and caching
+   - Add monitoring and health check endpoints
+   - Create Docker deployment configuration
+
+3. **Testing & Quality**
+   - Expand unit test coverage beyond basic contract tests
+   - Add integration tests with real story content
+   - Implement end-to-end workflow testing
+   - Add performance and load testing
 
 ---
 
-This comprehensive guide should enable users and third-party integrators to effectively use the MCP Story Service for all narrative intelligence needs. The service provides professional-grade story analysis with clear feedback and actionable recommendations for improvement.
+**⚠️ CURRENT STATUS**: This service provides a solid foundation and working MCP protocol implementation, but core analysis features are mock implementations. It's suitable for development, testing, and integration work, but not for production story analysis until real algorithms are implemented.

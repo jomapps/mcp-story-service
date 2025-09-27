@@ -32,9 +32,10 @@ async def test_integration_failure_handling_scenario():
             await client.call_tool(
                 "analyze_story_structure",
                 story_content="Test story requiring Brain service coordination",
+                genre="science_fiction",
                 project_id="integration-failure-test"
             )
 
-        # Assertions based on quickstart.md
-        assert "brain.ft.tc:8002" in str(excinfo.value)
+        # Assertions based on quickstart.md - check for localhost:9999 from test config
+        assert "localhost:9999" in str(excinfo.value)
         assert "unavailable" in str(excinfo.value).lower()

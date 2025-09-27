@@ -3,6 +3,7 @@ from mcp.mcp_server import McpServer
 from mcp.mcp_client import McpClient
 from src.mcp.handlers.plot_threads_handler import PlotThreadsHandler
 from src.services.narrative.analyzer import NarrativeAnalyzer
+from src.lib.genre_loader import GenreLoader
 
 @pytest.mark.asyncio
 async def test_plot_thread_tracking_scenario():
@@ -10,8 +11,16 @@ async def test_plot_thread_tracking_scenario():
     Integration test for the plot thread tracking scenario.
     """
     # Initialize dependencies
-    narrative_analyzer = NarrativeAnalyzer()
-    plot_threads_handler = PlotThreadsHandler(narrative_analyzer)
+    genre_loader = GenreLoader(config_path="config/genres")
+    narrative_analyzer = NarrativeAnalyzer(genre_loader)
+
+    # Create a lightweight session manager for testing
+    from src.services.session.manager import StorySessionManager
+    from unittest.mock import Mock
+    mock_redis_client = Mock()
+    session_manager = StorySessionManager(mock_redis_client)
+
+    plot_threads_handler = PlotThreadsHandler(narrative_analyzer, session_manager)
 
     # Create a mock server and register the tool
     server = McpServer()

@@ -3,6 +3,7 @@ from mcp.mcp_server import McpServer
 from mcp.mcp_client import McpClient
 import json
 import os
+import jsonschema
 
 # Get the absolute path to the contract file
 CONTRACT_FILE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'specs', '001-i-have-put', 'contracts', 'story-analysis-tools.json'))
@@ -54,6 +55,5 @@ async def test_apply_genre_patterns_contract():
             character_types=[]
         )
 
-        # In a real test, you would validate the result against the output schema
-        # using a library like jsonschema.
-        assert "genre_guidance" in result
+        # Validate the result against the contract's output schema
+        jsonschema.validate(result, tool_schema["output_schema"])

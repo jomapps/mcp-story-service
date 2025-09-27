@@ -14,9 +14,10 @@ async def test_concurrent_performance():
     Performance test for concurrent request handling.
     """
     # Initialize dependencies
-    redis_client = RedisClient()
+    from unittest.mock import Mock
+    fake_redis_client = Mock()
     genre_loader = GenreLoader(config_path="config/genres")
-    session_manager = SessionManager(redis_client)
+    session_manager = SessionManager(fake_redis_client)
     narrative_analyzer = NarrativeAnalyzer(genre_loader)
     story_structure_handler = StoryStructureHandler(narrative_analyzer, session_manager)
 

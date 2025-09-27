@@ -14,9 +14,15 @@ async def test_concurrent_request_handling_with_process_isolation():
     """
     # Initialize dependencies
     genre_loader = GenreLoader(config_path="config/genres")
-    process_isolation_manager = ProcessIsolationManager()
-    narrative_analyzer = NarrativeAnalyzer(genre_loader, process_isolation_manager=process_isolation_manager)
-    story_structure_handler = StoryStructureHandler(narrative_analyzer)
+    narrative_analyzer = NarrativeAnalyzer(genre_loader)
+
+    # Create a lightweight session manager for testing
+    from src.services.session.manager import StorySessionManager
+    from unittest.mock import Mock
+    mock_redis_client = Mock()
+    session_manager = StorySessionManager(mock_redis_client)
+
+    story_structure_handler = StoryStructureHandler(narrative_analyzer, session_manager)
 
     # Create a mock server and register the tool
     server = McpServer()

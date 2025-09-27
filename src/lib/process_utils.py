@@ -8,7 +8,8 @@ def worker_function(target, args):
     try:
         target(*args)
     except Exception as e:
-        logging.error(f"Error in worker process: {e}")
+        logging.exception(f"Error in worker process: {e}")
+        raise
 
 def create_process(target, args) -> multiprocessing.Process:
     """
@@ -20,6 +21,14 @@ def terminate_process(process: multiprocessing.Process):
     """
     Terminates a process.
     """
-    if process.is_alive():
-        process.terminate()
-        process.join()
+    try:
+        if process.is_alive():
+            process.terminate()
+    except Exception as e:
+        logging.exception(f"Error terminating process: {e}")
+    finally:
+        # Always join to clean up the process
+        try:
+            process.join(timeout=5.0)
+        except Exception as e:
+            logging.exception(f"Error joining process: {e}")

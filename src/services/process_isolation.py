@@ -30,5 +30,17 @@ class ProcessIsolationManager:
         Terminates the process for the given project ID.
         """
         process = self.processes.get(project_id)
-        if process and process.is_alive():
-            process.terminate()
+        if process:
+            try:
+                if process.is_alive():
+                    process.terminate()
+                    process.join(timeout=5.0)
+                    if process.is_alive():
+                        process.kill()
+                        process.join()
+            except Exception as e:
+                import logging
+                logging.exception(f"Error terminating process for project {project_id}: {e}")
+            finally:
+                # Always remove the process from the dict
+                del self.processes[project_id]

@@ -1,0 +1,24 @@
+# MCP Story Service Dependencies
+# Generated from pyproject.toml for users who prefer pip over Poetry
+
+# Core MCP and async support
+mcp>=1.0.0
+asyncio-mqtt>=0.11.0
+
+# Redis for session management
+redis>=4.5.0
+
+# YAML configuration loading
+PyYAML>=6.0
+
+# Testing framework
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+
+# Development tools (optional)
+black>=23.0.0
+ruff>=0.1.0
+
+# Note: This project is primarily managed with Poetry (pyproject.toml)
+# For full development setup, use: poetry install
+# For production deployment, consider using Poetry or Docker

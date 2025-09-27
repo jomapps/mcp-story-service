@@ -95,8 +95,10 @@ Execution steps:
        |--------|-------------|
        | A | <Option A description> |
        | B | <Option B description> |
-       | C | <Option C description> | (add D/E as needed up to 5)
-       | Short | Provide a different short answer (<=5 words) | (Include only if free-form alternative is appropriate)
+       | C | <Option C description> |
+       | Short | Provide a different short answer (<=5 words) |
+
+       You can add D/E options as needed up to 5 total options. The "Short" option is optional and should only be included when a free-form short answer is appropriate.
 
     - For short‑answer style (no meaningful discrete options), output a single line after the question: `Format: Short answer (<=5 words)`.
     - After the user answers:

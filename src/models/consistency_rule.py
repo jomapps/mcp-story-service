@@ -25,8 +25,8 @@ class ValidationLogic:
     conditions: List[str]
     assertions: List[str]
     error_message: str
-    suggested_fix: Optional[str]
     confidence_penalty: float
+    suggested_fix: Optional[str] = None
 
 @dataclass
 class ConsistencyRule:

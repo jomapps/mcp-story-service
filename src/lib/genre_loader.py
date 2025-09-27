@@ -114,7 +114,10 @@ class GenreLoader:
             character_archetypes=[
                 CharacterArchetype(**ca) for ca in data.get("character_archetypes", [])
             ],
-            common_beats=[BeatType[b] for b in data.get("common_beats", [])],
+            common_beats=[
+                BeatType(b.lower()) if not isinstance(b, BeatType) else b
+                for b in data.get("common_beats", [])
+            ],
             authenticity_rules=[
                 create_authenticity_rule(ar)
                 for ar in data.get("authenticity_rules", [])
