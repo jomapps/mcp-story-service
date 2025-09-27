@@ -1,47 +1,26 @@
-# Mystery Genre Template
-name: "mystery"
-description: "Stories involving puzzles, crimes, or unexplained events to be solved"
-
+name: Mystery
+description: Stories that revolve around a puzzle or a crime that needs to be solved.
 conventions:
-  pacing:
-    - "Gradual revelation of clues"
-    - "Red herrings and misdirection"
-    - "Building suspense to revelation"
-  
-  structure:
-    act_one:
-      - "Crime or mystery is established"
-      - "Introduce detective or protagonist"
-      - "Initial investigation begins"
-    act_two:
-      - "Gathering clues and evidence"
-      - "Interviewing suspects and witnesses"
-      - "False leads and complications"
-      - "Deeper mystery or second crime"
-    act_three:
-      - "Final clues come together"
-      - "Confrontation and revelation"
-      - "Resolution and explanation"
-
-  character_archetypes:
-    - "Detective or investigator"
-    - "Prime suspect or red herring"
-    - "Victim or person in danger"
-    - "Informant or witness"
-
-  common_elements:
-    - "Clues and evidence"
-    - "Suspects with motives"
-    - "Plot twists and revelations"
-    - "Logical deduction"
-    - "Hidden secrets revealed"
-
-authenticity_markers:
-  required:
-    - fair_play: "All clues available to reader/audience"
-    - logical_solution: "Resolution follows established evidence"
-    - satisfying_reveal: "Surprise that makes sense in hindsight"
-  
-confidence_thresholds:
-  minimum: 0.75
-  excellent: 0.90
+  - name: "Central Puzzle"
+    description: "The plot is driven by the investigation of a central question or crime."
+    importance: "essential"
+  - name: "Clues and Red Herrings"
+    description: "The story presents a series of clues and misleading information to the audience."
+    importance: "essential"
+  - name: "The Big Reveal"
+    description: "The solution to the puzzle is revealed in a climactic scene."
+    importance: "typical"
+pacing_profile:
+  name: "Mystery"
+  curve: [0.3, 0.5, 0.4, 0.6, 0.5, 0.7, 1.0]
+character_archetypes:
+  - name: "The Detective"
+    description: "The protagonist who investigates the mystery."
+  - name: "The Femme Fatale"
+    description: "A mysterious and seductive female character who may be a suspect or a client."
+common_beats:
+  - "INCITING_INCIDENT"
+  - "REVELATION"
+  - "TWIST"
+  - "CLIMAX"
+  - "RESOLUTION"

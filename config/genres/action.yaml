@@ -1,47 +1,25 @@
-# Action Genre Template
-name: "action"
-description: "High-energy stories with physical confrontations and excitement"
-
+name: Action
+description: High-energy stories with a focus on exciting sequences, physical feats, and conflict.
 conventions:
-  pacing:
-    - "Fast-paced with frequent action sequences"
-    - "Minimal exposition during action"
-    - "Build-up, action, recovery pattern"
-  
-  structure:
-    act_one:
-      - "Establish hero's abilities"
-      - "Inciting incident with immediate danger"
-      - "Clear antagonist and stakes"
-    act_two:
-      - "Escalating action sequences"
-      - "Hero faces increasing challenges"
-      - "Setbacks and obstacles"
-      - "Major action set piece"
-    act_three:
-      - "Final confrontation/battle"
-      - "Hero overcomes through skill/determination"
-      - "Victory and resolution"
-
-  character_archetypes:
-    - "Skilled hero/warrior"
-    - "Powerful antagonist"
-    - "Mentor or ally"
-    - "Person to rescue/protect"
-
-  common_elements:
-    - "Chase sequences"
-    - "Fight scenes and combat"
-    - "Explosions and destruction"
-    - "High stakes and danger"
-    - "Physical prowess over intellect"
-
-authenticity_markers:
-  required:
-    - action_clarity: "Clear choreography and spatial awareness"
-    - escalation: "Increasing intensity of action sequences"
-    - stakes: "Personal consequences for hero"
-  
-confidence_thresholds:
-  minimum: 0.75
-  excellent: 0.90
+  - name: "Constant Motion"
+    description: "The plot is driven by a series of action sequences, keeping the pace high."
+    importance: "essential"
+  - name: "Clear Hero and Villain"
+    description: "A clearly defined protagonist and antagonist are in direct opposition."
+    importance: "essential"
+  - name: "High Stakes"
+    description: "The conflict has significant, often life-or-death, consequences."
+    importance: "typical"
+pacing_profile:
+  name: "Action/Adventure"
+  curve: [0.2, 0.5, 0.4, 0.8, 0.6, 0.9, 1.0]
+character_archetypes:
+  - name: "The Action Hero"
+    description: "A resourceful and determined protagonist who drives the action."
+  - name: "The Mastermind Villain"
+    description: "An intelligent and powerful antagonist who opposes the hero."
+common_beats:
+  - "INCITING_INCIDENT"
+  - "SETBACK"
+  - "CLIMAX"
+  - "VICTORY"

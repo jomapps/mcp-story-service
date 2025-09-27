@@ -1,47 +1,27 @@
-# Fantasy Genre Template
-name: "fantasy"
-description: "Stories set in magical worlds with supernatural elements"
-
+name: Fantasy
+description: Stories set in imaginary worlds with magical or supernatural elements.
 conventions:
-  pacing:
-    - "World-building balanced with adventure"
-    - "Magic system reveals and discoveries"
-    - "Epic quests with escalating stakes"
-  
-  structure:
-    act_one:
-      - "Establish magical world and rules"
-      - "Introduce protagonist's ordinary world"
-      - "Call to adventure or magical incident"
-    act_two:
-      - "Journey into magical realm"
-      - "Learning magic system and rules"
-      - "Trials and magical challenges"
-      - "Dark lord or magical threat emerges"
-    act_three:
-      - "Final magical confrontation"
-      - "Hero uses learned powers/wisdom"
-      - "Restoration of magical balance"
-
-  character_archetypes:
-    - "Chosen one or reluctant hero"
-    - "Wise mentor or wizard"
-    - "Dark lord or evil sorcerer"
-    - "Magical companion or familiar"
-
-  common_elements:
-    - "Magic systems and spells"
-    - "Mythical creatures and beings"
-    - "Quests and prophecies"
-    - "Medieval or ancient settings"
-    - "Good vs evil conflict"
-
-authenticity_markers:
-  required:
-    - world_building: "Consistent magical rules and logic"
-    - wonder: "Sense of magic and discovery"
-    - hero_journey: "Character growth through trials"
-  
-confidence_thresholds:
-  minimum: 0.75
-  excellent: 0.90
+  - name: "Magical Systems"
+    description: "The world has a defined system of magic or supernatural powers."
+    importance: "essential"
+  - name: "World-Building"
+    description: "The story takes place in a detailed and immersive fictional world."
+    importance: "essential"
+  - name: "Epic Quests"
+    description: "The plot often revolves around a grand quest or journey."
+    importance: "typical"
+pacing_profile:
+  name: "Action/Adventure"
+  curve: [0.2, 0.5, 0.4, 0.8, 0.6, 0.9, 1.0]
+character_archetypes:
+  - name: "The Chosen One"
+    description: "A protagonist destined to save the world or fulfill a prophecy."
+  - name: "The Wise Mentor"
+    description: "An older character who guides the protagonist."
+common_beats:
+  - "INCITING_INCIDENT"
+  - "PLOT_POINT_1"
+  - "MIDPOINT"
+  - "PLOT_POINT_2"
+  - "CLIMAX"
+  - "RESOLUTION"

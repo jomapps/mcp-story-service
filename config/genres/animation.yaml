@@ -1,47 +1,24 @@
-# Animation Genre Template
-name: "animation"
-description: "Stories told through animated visuals with unique creative possibilities"
-
+name: Animation
+description: Stories told through animated visuals, spanning a wide range of genres and styles.
 conventions:
-  pacing:
-    - "Visual storytelling with animated sequences"
-    - "Exaggerated emotions and expressions"
-    - "Creative transitions and visual metaphors"
-  
-  structure:
-    act_one:
-      - "Establish animated world and rules"
-      - "Introduce characters through visual design"
-      - "Set up central conflict or journey"
-    act_two:
-      - "Explore animated world's possibilities"
-      - "Character development through visual expression"
-      - "Creative problem-solving sequences"
-      - "Visual spectacle and imagination"
-    act_three:
-      - "Climactic animated sequence"
-      - "Resolution using animated medium's strengths"
-      - "Emotional payoff through visual storytelling"
-
-  character_archetypes:
-    - "Animated protagonist with distinct design"
-    - "Colorful supporting characters"
-    - "Villain with exaggerated traits"
-    - "Mentor or guide figure"
-
-  common_elements:
-    - "Exaggerated character expressions"
-    - "Impossible physics and actions"
-    - "Colorful and imaginative worlds"
-    - "Musical numbers or sequences"
-    - "Visual comedy and sight gags"
-
-authenticity_markers:
-  required:
-    - visual_storytelling: "Story told effectively through animation"
-    - character_design: "Memorable and expressive character designs"
-    - creative_use: "Utilizes animation's unique possibilities"
-  
-confidence_thresholds:
-  minimum: 0.75
-  excellent: 0.90
+  - name: "Visual Storytelling"
+    description: "The narrative is heavily conveyed through expressive animation and visual gags."
+    importance: "essential"
+  - name: "Family-Friendly Themes"
+    description: "Often (but not always) targets a broad audience with accessible themes."
+    importance: "typical"
+  - name: "Personification"
+    description: "Inanimate objects or animals are given human-like qualities."
+    importance: "optional"
+pacing_profile:
+  name: "General"
+  curve: [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+character_archetypes:
+  - name: "The Optimistic Protagonist"
+    description: "A character with a positive outlook who overcomes challenges."
+  - name: "The Comedic Sidekick"
+    description: "A character who provides comic relief and supports the protagonist."
+common_beats:
+  - "INCITING_INCIDENT"
+  - "MIDPOINT"
+  - "RESOLUTION"

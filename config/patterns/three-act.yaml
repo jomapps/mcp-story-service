@@ -1,0 +1,27 @@
+name: Three-Act Structure
+description: A model that divides a story into three parts (or acts), often called the Setup, the Confrontation, and the Resolution.
+acts:
+  - name: "Act I: Setup"
+    description: "Introduces the characters, setting, and conflict."
+    start_position: 0.0
+    end_position: 0.25
+    key_events:
+      - "Exposition"
+      - "Inciting Incident"
+      - "Plot Point 1"
+  - name: "Act II: Confrontation"
+    description: "The main part of the story, where the protagonist faces a series of obstacles."
+    start_position: 0.25
+    end_position: 0.75
+    key_events:
+      - "Rising Action"
+      - "Midpoint"
+      - "Plot Point 2"
+  - name: "Act III: Resolution"
+    description: "The climax and resolution of the story."
+    start_position: 0.75
+    end_position: 1.0
+    key_events:
+      - "Pre-Climax"
+      - "Climax"
+      - "Denouement"

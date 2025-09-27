@@ -1,47 +1,25 @@
-# Romance Genre Template
-name: "romance"
-description: "Stories centered on romantic relationships and emotional connections"
-
+name: Romance
+description: Stories that focus on the development of a romantic relationship between two people.
 conventions:
-  pacing:
-    - "Emotional beats drive progression"
-    - "Sexual tension and chemistry"
-    - "Obstacles delay romantic union"
-  
-  structure:
-    act_one:
-      - "Meet cute or initial attraction"
-      - "Establish characters' romantic goals"
-      - "First obstacle to relationship"
-    act_two:
-      - "Growing attraction and bonding"
-      - "External and internal conflicts"
-      - "Misunderstandings and separation"
-      - "Dark moment or breakup"
-    act_three:
-      - "Realization of true love"
-      - "Grand gesture or confession"
-      - "Happy ending together"
-
-  character_archetypes:
-    - "Romantic lead (male/female)"
-    - "Love interest"
-    - "Rival or ex-partner"
-    - "Best friend/confidant"
-
-  common_elements:
-    - "Sexual tension and chemistry"
-    - "Obstacles to love"
-    - "Emotional vulnerability"
-    - "Happy ending (HEA)"
-    - "Character growth through love"
-
-authenticity_markers:
-  required:
-    - chemistry: "Believable romantic attraction"
-    - emotional_truth: "Realistic relationship dynamics"
-    - satisfaction: "Earned happy ending"
-  
-confidence_thresholds:
-  minimum: 0.75
-  excellent: 0.90
+  - name: "Central Love Story"
+    description: "The plot is driven by the development of a romantic relationship."
+    importance: "essential"
+  - name: "Obstacles to Love"
+    description: "The couple faces a series of internal and external obstacles that they must overcome."
+    importance: "essential"
+  - name: "Happily Ever After"
+    description: "The story typically ends with the couple together and happy."
+    importance: "typical"
+pacing_profile:
+  name: "Romance"
+  curve: [0.4, 0.6, 0.5, 0.7, 0.6, 0.8, 0.9]
+character_archetypes:
+  - name: "The Lovers"
+    description: "The two protagonists who fall in love."
+  - name: "The Rival"
+    description: "A character who competes for the affection of one of the lovers."
+common_beats:
+  - "INCITING_INCIDENT"
+  - "SETBACK"
+  - "CLIMAX"
+  - "RESOLUTION"

@@ -1,0 +1,21 @@
+name: Pacing Templates
+description: A collection of pacing profiles for different genres.
+templates:
+  - name: "Action/Adventure"
+    curve: [0.2, 0.5, 0.4, 0.8, 0.6, 0.9, 1.0]
+    description: "A fast-paced profile with a series of rising and falling action."
+  - name: "Drama"
+    curve: [0.4, 0.5, 0.6, 0.5, 0.6, 0.7, 0.8]
+    description: "A slower, more character-driven profile with a gradual build-up of tension."
+  - name: "Comedy"
+    curve: [0.5, 0.6, 0.5, 0.7, 0.6, 0.8, 0.9]
+    description: "A light and breezy profile with a series of humorous situations."
+  - name: "Thriller"
+    curve: [0.6, 0.4, 0.7, 0.5, 0.8, 0.6, 1.0]
+    description: "A suspenseful profile with a series of twists and turns."
+  - name: "Mystery"
+    curve: [0.3, 0.5, 0.4, 0.6, 0.5, 0.7, 1.0]
+    description: "A profile that builds suspense and intrigue as the mystery unfolds."
+  - name: "Romance"
+    curve: [0.4, 0.6, 0.5, 0.7, 0.6, 0.8, 0.9]
+    description: "A profile that focuses on the emotional journey of the characters."

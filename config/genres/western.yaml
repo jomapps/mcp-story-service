@@ -1,47 +1,25 @@
-# Western Genre Template
-name: "western"
-description: "Stories set in the American frontier, typically 19th century"
-
+name: Western
+description: Stories that are set in the American West during the late 19th century.
 conventions:
-  pacing:
-    - "Slow build to gunfight showdowns"
-    - "Travel and journey sequences"
-    - "Tension builds to climactic confrontation"
-  
-  structure:
-    act_one:
-      - "Establish frontier setting and conflict"
-      - "Introduce gunslinger or cowboy hero"
-      - "Call to action or injustice revealed"
-    act_two:
-      - "Journey across frontier landscape"
-      - "Encounters with outlaws or natives"
-      - "Building to final confrontation"
-      - "Hero faces moral choices"
-    act_three:
-      - "Final gunfight or showdown"
-      - "Justice served or order restored"
-      - "Hero rides into sunset"
-
-  character_archetypes:
-    - "Lone gunslinger or sheriff"
-    - "Outlaw or cattle baron villain"
-    - "Frontier woman or saloon girl"
-    - "Wise Native American or old-timer"
-
-  common_elements:
-    - "Frontier towns and landscapes"
-    - "Horseback chases and gunfights"
-    - "Cattle drives or gold mining"
-    - "Law vs lawlessness themes"
-    - "Man vs nature conflicts"
-
-authenticity_markers:
-  required:
-    - frontier_atmosphere: "Authentic Old West setting and tone"
-    - moral_clarity: "Clear distinction between right and wrong"
-    - individualism: "Self-reliant protagonist facing challenges alone"
-  
-confidence_thresholds:
-  minimum: 0.75
-  excellent: 0.90
+  - name: "Frontier Setting"
+    description: "The story takes place in a sparsely populated and lawless region of the American West."
+    importance: "essential"
+  - name: "Cowboys and Outlaws"
+    description: "The story features characters who are cowboys, gunslingers, and outlaws."
+    importance: "essential"
+  - name: "Showdowns and Duels"
+    description: "The conflict is often resolved through a dramatic gunfight or duel."
+    importance: "typical"
+pacing_profile:
+  name: "Action/Adventure"
+  curve: [0.2, 0.5, 0.4, 0.8, 0.6, 0.9, 1.0]
+character_archetypes:
+  - name: "The Lone Gunslinger"
+    description: "A mysterious and skilled gunman who is often a loner."
+  - name: "The Town Sheriff"
+    description: "A lawman who is responsible for maintaining order in a lawless town."
+common_beats:
+  - "INCITING_INCIDENT"
+  - "SETBACK"
+  - "CLIMAX"
+  - "RESOLUTION"

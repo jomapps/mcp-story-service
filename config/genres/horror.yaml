@@ -1,47 +1,25 @@
-# Horror Genre Template
-name: "horror"
-description: "Stories designed to frighten, unsettle, and create suspense"
-
+name: Horror
+description: Stories designed to frighten, scare, or disgust.
 conventions:
-  pacing:
-    - "Building dread and tension"
-    - "Jump scares and relief moments"
-    - "Slow burn to intense climax"
-  
-  structure:
-    act_one:
-      - "Establish normal world"
-      - "First supernatural/threatening event"
-      - "Characters dismiss or rationalize threat"
-    act_two:
-      - "Escalating supernatural events"
-      - "Characters realize true danger"
-      - "Attempts to escape or fight fail"
-      - "Darkest moment before climax"
-    act_three:
-      - "Final confrontation with evil"
-      - "Resolution through sacrifice or victory"
-      - "Ambiguous ending or final scare"
-
-  character_archetypes:
-    - "Final girl/survivor"
-    - "Supernatural antagonist"
-    - "Skeptical authority figure"
-    - "Expendable victim characters"
-
-  common_elements:
-    - "Isolation and vulnerability"
-    - "Unknown or unseen threats"
-    - "Psychological terror"
-    - "Death and violence"
-    - "Supernatural or unexplained events"
-
-authenticity_markers:
-  required:
-    - atmosphere: "Sustained mood of dread and fear"
-    - tension: "Building suspense throughout"
-    - payoff: "Satisfying revelation of threat"
-  
-confidence_thresholds:
-  minimum: 0.75
-  excellent: 0.90
+  - name: "Atmosphere of Dread"
+    description: "The story creates a sense of fear and suspense."
+    importance: "essential"
+  - name: "Supernatural or Psychological Threat"
+    description: "The conflict comes from a monstrous or psychological force."
+    importance: "essential"
+  - name: "Jump Scares"
+    description: "The story uses sudden and shocking moments to startle the audience."
+    importance: "optional"
+pacing_profile:
+  name: "Thriller"
+  curve: [0.6, 0.4, 0.7, 0.5, 0.8, 0.6, 1.0]
+character_archetypes:
+  - name: "The Final Girl"
+    description: "A resourceful female protagonist who survives to confront the killer."
+  - name: "The Skeptic"
+    description: "A character who refuses to believe in the supernatural threat until it's too late."
+common_beats:
+  - "INCITING_INCIDENT"
+  - "SETBACK"
+  - "CLIMAX"
+  - "RESOLUTION"

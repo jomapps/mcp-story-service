@@ -1,47 +1,25 @@
-# Biographical Genre Template
-name: "biographical"
-description: "Stories depicting the life of a real person or inspired by real lives"
-
+name: Biographical
+description: Stories based on the real life of a person or group of people.
 conventions:
-  pacing:
-    - "Life events drive narrative progression"
-    - "Character development over time"
-    - "Key moments and turning points"
-  
-  structure:
-    act_one:
-      - "Establish subject's background and context"
-      - "Early life or formative experiences"
-      - "First major challenge or opportunity"
-    act_two:
-      - "Rise to prominence or significance"
-      - "Major achievements and setbacks"
-      - "Personal and professional struggles"
-      - "Crisis or major life challenge"
-    act_three:
-      - "Resolution of central life conflict"
-      - "Legacy or lasting impact"
-      - "Reflection on life's meaning"
-
-  character_archetypes:
-    - "The biographical subject"
-    - "Supporting family or friends"
-    - "Mentor or influential figure"
-    - "Antagonist or opposing force"
-
-  common_elements:
-    - "Real-life events and timeline"
-    - "Personal relationships and family"
-    - "Professional or public achievements"
-    - "Character growth and change"
-    - "Historical and social context"
-
-authenticity_markers:
-  required:
-    - factual_basis: "Grounded in real person's life and documented events"
-    - character_truth: "Captures essence of person's character and motivations"
-    - respectful_portrayal: "Balanced and fair representation of subject"
-  
-confidence_thresholds:
-  minimum: 0.75
-  excellent: 0.90
+  - name: "Based on a True Story"
+    description: "The narrative is grounded in historical events and real individuals."
+    importance: "essential"
+  - name: "Focus on a Key Period"
+    description: "The story typically concentrates on a significant period in the subject's life."
+    importance: "essential"
+  - name: "Historical Context"
+    description: "The narrative is interwoven with the historical and cultural context of the time."
+    importance: "typical"
+pacing_profile:
+  name: "Drama"
+  curve: [0.4, 0.5, 0.6, 0.5, 0.6, 0.7, 0.8]
+character_archetypes:
+  - name: "The Subject"
+    description: "The central figure whose life is being depicted."
+  - name: "The Confidant"
+    description: "A close friend or family member who provides support and perspective."
+common_beats:
+  - "INCITING_INCIDENT"
+  - "SETBACK"
+  - "VICTORY"
+  - "RESOLUTION"

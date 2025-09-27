@@ -1,47 +1,25 @@
-# War Genre Template
-name: "war"
-description: "Stories set during armed conflicts focusing on combat and its effects"
-
+name: War
+description: Stories that are set during a time of war, and often explore the experiences of soldiers and civilians.
 conventions:
-  pacing:
-    - "Alternating between action and quiet moments"
-    - "Building tension before battles"
-    - "Emotional beats between combat"
-  
-  structure:
-    act_one:
-      - "Establish war context and stakes"
-      - "Introduce soldiers and unit"
-      - "First taste of combat or deployment"
-    act_two:
-      - "Escalating battles and missions"
-      - "Character bonds and losses"
-      - "Moral complexity of war revealed"
-      - "Major battle or turning point"
-    act_three:
-      - "Final mission or decisive battle"
-      - "Personal sacrifice for greater good"
-      - "Resolution and war's aftermath"
-
-  character_archetypes:
-    - "Reluctant soldier or veteran"
-    - "Commanding officer or leader"
-    - "Enemy combatant or civilian"
-    - "War correspondent or medic"
-
-  common_elements:
-    - "Combat sequences and battles"
-    - "Military hierarchy and orders"
-    - "Brotherhood among soldiers"
-    - "Moral ambiguity of warfare"
-    - "Sacrifice and heroism"
-
-authenticity_markers:
-  required:
-    - realism: "Authentic portrayal of combat and military life"
-    - human_cost: "Shows emotional and physical toll of war"
-    - moral_complexity: "Explores ethical dilemmas of warfare"
-  
-confidence_thresholds:
-  minimum: 0.75
-  excellent: 0.90
+  - name: "War Setting"
+    description: "The story takes place during a specific historical war."
+    importance: "essential"
+  - name: "Focus on the Human Cost"
+    description: "The story explores the physical and psychological toll of war on individuals."
+    importance: "essential"
+  - name: "Combat Sequences"
+    description: "The story often includes realistic and intense depictions of combat."
+    importance: "typical"
+pacing_profile:
+  name: "Action/Adventure"
+  curve: [0.2, 0.5, 0.4, 0.8, 0.6, 0.9, 1.0]
+character_archetypes:
+  - name: "The Young Recruit"
+    description: "A naive and idealistic young soldier who is new to the horrors of war."
+  - name: "The Grizzled Veteran"
+    description: "An experienced and cynical soldier who has seen too much."
+common_beats:
+  - "INCITING_INCIDENT"
+  - "SETBACK"
+  - "VICTORY"
+  - "RESOLUTION"

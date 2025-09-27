@@ -1,70 +1,50 @@
-<!--
-Sync Impact Report:
-Version change: v1.0.0 → v1.1.0 (Added LLM Declaration Principle)
-Modified principles: None (existing principles unchanged)
-Added sections: VI. LLM Declaration and Management
-Removed sections: None
-Templates requiring updates:
-  ✅ plan-template.md - Updated Technical Context with LLM Requirements field
-  ✅ spec-template.md - No constitutional requirements identified  
-  ✅ tasks-template.md - TDD workflow matches Test-First principle
-  ✅ Command templates - No command templates directory found
-Follow-up TODOs: None - all templates updated for LLM Declaration principle
--->
-
-# MCP Story Service Constitution
+# [PROJECT_NAME] Constitution
+<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
 
 ## Core Principles
 
-### I. Library-First
-Every feature starts as a standalone library with clear narrative intelligence purpose. Libraries MUST be self-contained, independently testable, and documented. Each service component MUST have a single, well-defined responsibility within the story analysis domain. No organizational-only libraries - each component must provide concrete value to story intelligence or MCP protocol functionality.
+### [PRINCIPLE_1_NAME]
+<!-- Example: I. Library-First -->
+[PRINCIPLE_1_DESCRIPTION]
+<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
 
-### II. Test-First (NON-NEGOTIABLE)
-TDD is mandatory: Tests written → User approved → Tests MUST fail → Then implement. Red-Green-Refactor cycle strictly enforced. Contract tests MUST validate MCP protocol compliance before any tool implementation. Integration tests MUST validate story analysis scenarios before service development. All narrative analysis algorithms MUST be validated against known story examples.
+### [PRINCIPLE_2_NAME]
+<!-- Example: II. CLI Interface -->
+[PRINCIPLE_2_DESCRIPTION]
+<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
 
-### III. Simplicity
-Start simple, follow YAGNI principles. Single responsibility service focused exclusively on story analysis. Avoid premature optimization - quality over speed as explicitly stated in performance requirements. Each analysis engine (narrative, consistency, genre, pacing) MUST address one concern. Complex multi-service integrations MUST be justified in Complexity Tracking section.
+### [PRINCIPLE_3_NAME]
+<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
+[PRINCIPLE_3_DESCRIPTION]
+<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
 
-### IV. Integration Testing
-Focus areas requiring integration tests: MCP protocol contract validation, story analysis cross-service communication, narrative consistency across analysis engines, session state persistence, concurrent request handling. All external service integrations (Brain, Auto-Movie, Task services) MUST have integration test coverage. Service boundaries MUST be validated through contract testing.
+### [PRINCIPLE_4_NAME]
+<!-- Example: IV. Integration Testing -->
+[PRINCIPLE_4_DESCRIPTION]
+<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
 
-### V. Observability  
-MCP protocol provides structured communication ensuring debuggability. All story analysis operations MUST log analysis decisions, confidence scores, and reasoning paths. Error states MUST include sufficient context for narrative intelligence debugging. Session state changes MUST be trackable. Performance metrics MUST be captured for story analysis quality assessment.
+### [PRINCIPLE_5_NAME]
+<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
+[PRINCIPLE_5_DESCRIPTION]
+<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
 
-### VI. LLM Declaration and Management
-All LLMs required or used by the service MUST be declared in environment variables. LLM integrations MUST use BAML (Boundary ML) for structured LLM interactions and prompt management. Environment variables MUST specify model names, endpoints, API keys, and configuration parameters. No hardcoded LLM references or API calls outside of BAML framework. All prompt templates and LLM workflows MUST be version-controlled through BAML configuration files.
+## [SECTION_2_NAME]
+<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
 
-## Quality Standards
+[SECTION_2_CONTENT]
+<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
 
-### Story Analysis Quality
-Narrative intelligence outputs MUST be deterministic given identical inputs. Analysis algorithms MUST provide confidence scores and reasoning explanations. Genre compliance scoring MUST reference specific conventions. Plot hole detection MUST specify severity levels and suggested remediation. All story recommendations MUST be actionable and contextually relevant.
+## [SECTION_3_NAME]
+<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
 
-### MCP Protocol Compliance  
-All tools MUST validate input parameters according to contract specifications. Response schemas MUST match contracted formats exactly. Error responses MUST follow MCP protocol standards. Tool registration MUST be complete and discoverable. Concurrent request handling MUST maintain protocol integrity.
-
-### Performance and Reliability
-Quality prioritized over speed - thorough analysis preferred over rapid response. 10 concurrent requests MUST be supported without degradation. Story session state MUST persist across service restarts. Memory usage MUST remain bounded under concurrent load. Response times MAY be longer to ensure analysis depth and accuracy.
-
-## Development Workflow
-
-### Implementation Process
-1. Specification requirements → Contract definitions → Integration test scenarios
-2. Contract tests written and failing → Model implementation → Service implementation  
-3. MCP tool handlers → Protocol integration → Performance validation
-4. All tests passing → Documentation complete → Deployment ready
-
-### Code Review Requirements
-Constitution compliance MUST be verified in all reviews. TDD workflow MUST be evidenced (failing tests before implementation). Integration boundaries MUST be validated. Performance characteristics MUST be documented. Complexity deviations MUST be justified and tracked.
-
-### Quality Gates
-Tests MUST pass before merge. Contract compliance MUST be validated. Integration tests MUST cover cross-service boundaries. Performance requirements MUST be satisfied. Documentation MUST be complete and accurate.
+[SECTION_3_CONTENT]
+<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
 
 ## Governance
+<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-This constitution supersedes all other development practices. Amendments require explicit documentation, approval, and migration plan. All implementation decisions MUST verify constitutional compliance before proceeding.
+[GOVERNANCE_RULES]
+<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
 
-Complexity deviations MUST be documented in Complexity Tracking with explicit justification. Multiple service integrations require architectural review. Performance trade-offs MUST align with quality-over-speed principle.
-
-Use CLAUDE.md for agent-specific runtime development guidance. Constitutional violations block implementation progress until resolved.
-
-**Version**: 1.1.0 | **Ratified**: 2025-09-26 | **Last Amended**: 2025-09-26
+**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
+<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->

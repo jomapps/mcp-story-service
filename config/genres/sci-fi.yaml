@@ -1,47 +1,25 @@
-# Science Fiction Genre Template
-name: "sci-fi"
-description: "Stories exploring futuristic concepts, technology, and scientific possibilities"
-
+name: Sci-Fi
+description: Stories that explore the impact of science and technology on society and individuals.
 conventions:
-  pacing:
-    - "World-building exposition balanced with action"
-    - "Technological reveals and discoveries"
-    - "Escalating scientific/technological threats"
-  
-  structure:
-    act_one:
-      - "Establish futuristic world and rules"
-      - "Introduce scientific concept or technology"
-      - "Inciting incident involving sci-fi element"
-    act_two:
-      - "Explore implications of technology"
-      - "Complications from scientific element"
-      - "Characters adapt to new realities"
-      - "Technology becomes threat or solution"
-    act_three:
-      - "Resolution using established sci-fi rules"
-      - "Consequences of technological choices"
-      - "New equilibrium or understanding"
-
-  character_archetypes:
-    - "Scientist or researcher"
-    - "Space explorer or pilot"
-    - "Artificial intelligence or android"
-    - "Alien or enhanced human"
-
-  common_elements:
-    - "Advanced technology"
-    - "Space travel or alien worlds"
-    - "Time travel or parallel dimensions"
-    - "Genetic engineering or enhancement"
-    - "Artificial intelligence"
-
-authenticity_markers:
-  required:
-    - world_building: "Consistent internal logic"
-    - speculation: "Plausible scientific concepts"
-    - exploration: "Examines implications of technology"
-  
-confidence_thresholds:
-  minimum: 0.75
-  excellent: 0.90
+  - name: "Advanced Technology"
+    description: "The story features technology that is more advanced than what is currently available."
+    importance: "essential"
+  - name: "Exploration of Ideas"
+    description: "The story often explores philosophical or social questions related to science and technology."
+    importance: "essential"
+  - name: "Future or Alien Setting"
+    description: "The story is often set in the future or on another planet."
+    importance: "typical"
+pacing_profile:
+  name: "Action/Adventure"
+  curve: [0.2, 0.5, 0.4, 0.8, 0.6, 0.9, 1.0]
+character_archetypes:
+  - name: "The Scientist"
+    description: "A character who is an expert in a particular field of science or technology."
+  - name: "The Everyman"
+    description: "A relatable protagonist who is caught up in the events of the story."
+common_beats:
+  - "INCITING_INCIDENT"
+  - "REVELATION"
+  - "CLIMAX"
+  - "RESOLUTION"

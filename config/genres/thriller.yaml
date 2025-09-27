@@ -1,53 +1,26 @@
-# Thriller Genre Template
-name: "thriller"
-description: "Suspenseful stories with tension, danger, and excitement"
-
+name: Thriller
+description: Stories that are characterized by suspense, excitement, and a sense of impending doom.
 conventions:
-  pacing:
-    - "Fast-paced with escalating tension"
-    - "Short, punchy scenes during action sequences"
-    - "Moments of calm before major revelations"
-  
-  structure:
-    act_one:
-      - "Establish protagonist in normal world"
-      - "Introduce inciting incident or threat"
-      - "First plot point launches main conflict"
-    act_two:
-      - "Escalating danger and obstacles"
-      - "Red herrings and misdirection"
-      - "Midpoint revelation or major setback"
-      - "Crisis point where stakes are highest"
-    act_three:
-      - "Final confrontation or chase"
-      - "Resolution of main threat"
-      - "Denouement showing new normal"
-
-  character_archetypes:
-    - "Reluctant hero/protagonist"
-    - "Mysterious antagonist"
-    - "Authority figure (helpful or corrupt)"
-    - "Innocent victim or love interest"
-
-  common_elements:
-    - "Ticking clock or deadline"
-    - "Cat and mouse dynamics"
-    - "Plot twists and revelations"
-    - "High stakes (life/death/world-ending)"
-    - "Paranoia and distrust"
-
-authenticity_markers:
-  required:
-    - tension_curve: "Consistent rising action with brief respites"
-    - stakes: "Clear consequences for failure"
-    - pacing: "Maintains momentum throughout"
-  
-  optional:
-    - "Chase sequences"
-    - "Hidden identities"
-    - "Double agents or betrayals"
-    - "Technology or weapon threats"
-
-confidence_thresholds:
-  minimum: 0.75
-  excellent: 0.90
+  - name: "High Stakes"
+    description: "The conflict has significant, often life-or-death, consequences."
+    importance: "essential"
+  - name: "Fast-Paced Plot"
+    description: "The story moves quickly, with a series of twists and turns."
+    importance: "essential"
+  - name: "Race Against Time"
+    description: "The protagonist is often working against a deadline to prevent a catastrophe."
+    importance: "typical"
+pacing_profile:
+  name: "Thriller"
+  curve: [0.6, 0.4, 0.7, 0.5, 0.8, 0.6, 1.0]
+character_archetypes:
+  - name: "The Everyman Hero"
+    description: "An ordinary person who is drawn into a dangerous situation."
+  - name: "The Mastermind Villain"
+    description: "An intelligent and ruthless antagonist who is always one step ahead."
+common_beats:
+  - "INCITING_INCIDENT"
+  - "SETBACK"
+  - "TWIST"
+  - "CLIMAX"
+  - "RESOLUTION"

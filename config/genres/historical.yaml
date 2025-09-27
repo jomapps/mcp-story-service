@@ -1,47 +1,25 @@
-# Historical Genre Template
-name: "historical"
-description: "Stories set in past time periods with authentic historical detail"
-
+name: Historical
+description: Stories set in the past, often with a focus on historical events and figures.
 conventions:
-  pacing:
-    - "Period-appropriate storytelling rhythm"
-    - "Historical events drive plot progression"
-    - "Character arcs reflect historical context"
-  
-  structure:
-    act_one:
-      - "Establish historical time and place"
-      - "Introduce characters within historical context"
-      - "Historical conflict or event begins"
-    act_two:
-      - "Characters navigate historical challenges"
-      - "Historical forces create obstacles"
-      - "Personal stories intersect with history"
-      - "Historical climax approaches"
-    act_three:
-      - "Resolution within historical framework"
-      - "Characters' fates tied to historical outcome"
-      - "Historical perspective on events"
-
-  character_archetypes:
-    - "Historical figure or inspired character"
-    - "Common person caught in history"
-    - "Representative of historical opposing force"
-    - "Observer or chronicler of events"
-
-  common_elements:
-    - "Authentic period details and customs"
-    - "Historical events and figures"
-    - "Social and political contexts"
-    - "Period-appropriate language and behavior"
-    - "Themes relevant to historical period"
-
-authenticity_markers:
-  required:
-    - historical_accuracy: "Faithful representation of historical facts and context"
-    - period_authenticity: "Convincing portrayal of historical time period"
-    - thematic_relevance: "Story themes resonate with historical significance"
-  
-confidence_thresholds:
-  minimum: 0.75
-  excellent: 0.90
+  - name: "Historical Setting"
+    description: "The story takes place in a specific and recognizable historical period."
+    importance: "essential"
+  - name: "Period Detail"
+    description: "The narrative includes accurate details about the customs, clothing, and technology of the era."
+    importance: "essential"
+  - name: "Fictional Characters in a Real World"
+    description: "The story often features fictional characters interacting with historical events and figures."
+    importance: "typical"
+pacing_profile:
+  name: "Drama"
+  curve: [0.4, 0.5, 0.6, 0.5, 0.6, 0.7, 0.8]
+character_archetypes:
+  - name: "The Observer"
+    description: "A character who provides a window into the historical events."
+  - name: "The Historical Figure"
+    description: "A real person from history who plays a role in the story."
+common_beats:
+  - "INCITING_INCIDENT"
+  - "SETBACK"
+  - "REVELATION"
+  - "RESOLUTION"

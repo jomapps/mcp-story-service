@@ -1,53 +1,25 @@
-# Drama Genre Template
-name: "drama"
-description: "Character-driven stories focusing on emotional conflicts and human relationships"
-
+name: Drama
+description: Stories that focus on character development and emotional themes.
 conventions:
-  pacing:
-    - "Character development over action"
-    - "Emotional beats drive story progression"
-    - "Introspective moments and dialogue"
-  
-  structure:
-    act_one:
-      - "Establish characters and relationships"
-      - "Introduce emotional conflict or dilemma"
-      - "Set up character wants vs needs"
-    act_two:
-      - "Explore character relationships"
-      - "Internal and external obstacles"
-      - "Character growth through conflict"
-      - "Emotional climax or breakdown"
-    act_three:
-      - "Character makes crucial decision"
-      - "Resolution of emotional arc"
-      - "New understanding or acceptance"
-
-  character_archetypes:
-    - "Flawed protagonist seeking redemption"
-    - "Mentor or wise guide"
-    - "Family member or friend in conflict"
-    - "Love interest or romantic partner"
-
-  common_elements:
-    - "Family dynamics"
-    - "Moral dilemmas"
-    - "Coming of age themes"
-    - "Loss and grief"
-    - "Social issues"
-
-authenticity_markers:
-  required:
-    - character_depth: "Multi-dimensional characters with clear motivations"
-    - emotional_truth: "Realistic human emotions and reactions"
-    - dialogue: "Natural, character-specific speech patterns"
-  
-  optional:
-    - "Symbolism and metaphor"
-    - "Flashbacks to reveal backstory"
-    - "Internal monologue"
-    - "Realistic settings"
-
-confidence_thresholds:
-  minimum: 0.75
-  excellent: 0.90
+  - name: "Character-Driven"
+    description: "The plot is driven by the choices and relationships of the characters."
+    importance: "essential"
+  - name: "Emotional Conflict"
+    description: "The story revolves around internal and interpersonal conflicts."
+    importance: "essential"
+  - name: "Serious Tone"
+    description: "Dramas typically have a serious and thoughtful tone."
+    importance: "typical"
+pacing_profile:
+  name: "Drama"
+  curve: [0.4, 0.5, 0.6, 0.5, 0.6, 0.7, 0.8]
+character_archetypes:
+  - name: "The Protagonist"
+    description: "The central character who undergoes significant emotional development."
+  - name: "The Antagonist"
+    description: "A character who creates conflict for the protagonist."
+common_beats:
+  - "INCITING_INCIDENT"
+  - "SETBACK"
+  - "CLIMAX"
+  - "RESOLUTION"
